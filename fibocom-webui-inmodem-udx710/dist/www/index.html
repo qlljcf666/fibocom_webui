@@ -1,0 +1,12 @@
+<!doctype html><html lang=""><head><script>
+(function(){
+  try {
+    sessionStorage.setItem("Authorization","local");
+    sessionStorage.setItem("Language","ch");
+    var h = location.hash;
+    if (!h || h === "#/" || h === "#/Login" || h.indexOf("#/Login?") === 0) {
+      history.replaceState(null, "", "/#/Home");
+    }
+  } catch (e) {}
+})();
+</script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><script src="./config.js"></script><title>Fibocom 模组管理</title><script defer="defer" src="/js/chunk-vendors.1732844826120.js"></script><script defer="defer" src="/js/index.1732844826120.js"></script><link href="/css/chunk-vendors.1732844826120.css" rel="stylesheet"><style>.el-icon-switch-button{display:none!important}</style><link href="/css/index.1732844826120.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but fibocom doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app" style="padding: 0;margin:0;"></div></body></html>

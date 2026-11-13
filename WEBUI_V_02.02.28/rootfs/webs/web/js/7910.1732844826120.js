@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[7910],{57910:(e,l,c)=>{c.r(l),c.d(l,{default:()=>o});var n=function(){var e=this,l=e.$createElement,c=e._self._c||l;return c("div",[c("SpecialApp")],1)},t=[];const s={},u=s;var r=c(1001),a=(0,r.Z)(u,n,t,!1,null,null,null);const o=a.exports}}]);

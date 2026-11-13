@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[2491],{52491:(e,c,l)=>{l.r(c),l.d(c,{default:()=>a});var n=function(){var e=this,c=e.$createElement,l=e._self._c||c;return l("div",[l("OneClickCheck")],1)},t=[];const s={},u=s;var r=l(1001),o=(0,r.Z)(u,n,t,!1,null,null,null);const a=o.exports}}]);

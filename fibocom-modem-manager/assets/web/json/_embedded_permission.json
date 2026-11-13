@@ -1,0 +1,368 @@
+{
+  "M1": [
+    {
+      "title": "home.home",
+      "icon": "fibocom icon-31shouye",
+      "index": "Home",
+      "show": true
+    },
+    {
+      "title": "networkSettings.networkSettings",
+      "icon": "fibocom icon-wangluo",
+      "show": true,
+      "index": "MobileNetworkSetting"
+    },
+    {
+      "title": "wifiSettings.wifiSettings",
+      "icon": "fibocom icon-xinhao",
+      "show": true,
+      "index": "WLAN"
+    },
+    {
+      "title": "devices.devices",
+      "icon": "fibocom icon-shebeiguanli",
+      "show": true,
+      "index": "Terminal"
+    },
+    {
+      "title": "tools.tools",
+      "icon": "fibocom icon-gongjuxiang",
+      "show": true,
+      "index": "Tools"
+    },
+    {
+      "title": "advanced.advanced",
+      "icon": "fibocom icon-shezhi",
+      "show": true,
+      "index": "Advanced"
+    }
+  ],
+  "M7": [
+    {
+      "title": "networkSettings.mobileNetwork",
+      "index": "MobileNetwork",
+      "show": true,
+      "children": [
+        {
+          "title": "networkSettings.internetConnection",
+          "index": "MobileNetworkSetting",
+          "show": true
+        },
+        {
+          "title": "networkSettings.mobileNetworkSearching",
+          "index": "MobileNetworkSearch",
+          "show": true
+        }
+      ]
+    },
+    {
+      "title": "networkSettings.ethernet",
+      "index": "Ethernet",
+      "show": true,
+      "children": [
+        {
+          "title": "networkSettings.ethernetSettings",
+          "index": "EthernetSet",
+          "show": true
+        },
+        {
+          "title": "networkSettings.ethernetStatus",
+          "index": "EthernetStatus",
+          "show": true
+        }
+      ]
+    }
+  ],
+  "nV": [
+    {
+      "title": "networkSettings.internetConnection",
+      "index": "MobileNetworkSetting",
+      "show": true
+    },
+    {
+      "title": "networkSettings.mobileNetworkSearching",
+      "index": "MobileNetworkSearch",
+      "show": true
+    }
+  ],
+  "HZ": [
+    {
+      "title": "wifiSettings.wifiBasicSettings",
+      "index": "WlanEasySet",
+      "show": true
+    },
+    {
+      "title": "wifiSettings.guestWiFi",
+      "index": "GuestWlan",
+      "show": true
+    }
+  ],
+  "KS": [
+    {
+      "title": "tools.SMS",
+      "index": "SMS",
+      "show": true,
+      "children": [
+        {
+          "title": "tools.SMSConversation",
+          "index": "SMSSession",
+          "show": true
+        },
+        {
+          "title": "tools.SMSSettings",
+          "index": "SMSSetting",
+          "show": true
+        }
+      ]
+    },
+    {
+      "title": "tools.statistics",
+      "index": "Flow",
+      "show": true
+    },
+    {
+      "title": "tools.parentalControl",
+      "index": "ChildProtect",
+      "show": true
+    }
+  ],
+  "kJ": [
+    {
+      "title": "tools.SMSConversation",
+      "index": "SMSSession",
+      "show": true
+    },
+    {
+      "title": "tools.SMSSettings",
+      "index": "SMSSetting",
+      "show": true
+    },
+    {
+      "title": "tools.SMSConversation",
+      "index": "SMSSession",
+      "show": true
+    }
+  ],
+  "N2": {
+    "mobileNetwork": {
+      "fieldName": "移动网路",
+      "show": true
+    },
+    "ethernet": {
+      "fieldName": "以太网",
+      "show": false
+    },
+    "internetConnection": {
+      "fieldName": "移动网络设置",
+      "show": true
+    },
+    "mobileNetworkSearching": {
+      "fieldName": "移动网络搜索",
+      "show": true
+    },
+    "ethernetSettings": {
+      "fieldName": "以太网设置",
+      "show": true
+    },
+    "ethernetStatus": {
+      "fieldName": "以太网状态",
+      "show": true
+    },
+    "mobileData": {
+      "fieldName": "移动数据",
+      "show": true
+    },
+    "dataRoaming": {
+      "fieldName": "漫游数据",
+      "show": true
+    },
+    "autoNetwork": {
+      "fieldName": "自动选择网络",
+      "show": true
+    }
+  },
+  "_F": [
+    {
+      "title": "advanced.WiFi",
+      "index": "WlanSet",
+      "fieldName": "WLAN",
+      "show": true,
+      "children": [
+        {
+          "title": "advanced.WiFiAdvancedSettings",
+          "index": "WiFiAdvancedSettings",
+          "fieldName": "WiFiAdvancedSettings",
+          "show": true
+        },
+        {
+          "title": "advanced.WiFiSecuritySettings",
+          "index": "WiFiSecuritySettings",
+          "fieldName": "WiFiSecuritySettings",
+          "show": true
+        },
+        {
+          "title": "advanced.WiFiMACFilter",
+          "index": "WiFiMACFilter",
+          "fieldName": "WiFiMACFilter",
+          "show": false
+        },
+        {
+          "title": "advanced.WiFiWPS",
+          "index": "WiFiWPS",
+          "fieldName": "WiFiWPS",
+          "show": true
+        }
+      ]
+    },
+    {
+      "title": "advanced.updates",
+      "index": "UpDate",
+      "fieldName": "UpDate",
+      "show": true
+    },
+    {
+      "title": "advanced.route",
+      "index": "Route",
+      "fieldName": "Route",
+      "show": true,
+      "children": [
+        {
+          "title": "DHCP",
+          "index": "DHCP",
+          "fieldName": "DHCP",
+          "show": true
+        },
+        {
+          "title": "advanced.DDNS",
+          "index": "DDNS",
+          "fieldName": "DDNS",
+          "show": true
+        },
+        {
+          "title": "VPN",
+          "index": "VPN",
+          "fieldName": "VPN",
+          "show": true
+        }
+      ]
+    },
+    {
+      "title": "advanced.security",
+      "index": "Security",
+      "fieldName": "Security",
+      "show": true,
+      "children": [
+        {
+          "title": "advanced.firewall",
+          "index": "Firewall",
+          "fieldName": "Firewall",
+          "show": true
+        },
+        {
+          "title": "advanced.MACAddressFilter",
+          "index": "MACAddressFilter",
+          "fieldName": "MACAddressFilter",
+          "show": true
+        },
+        {
+          "title": "advanced.IPFilter",
+          "index": "IPAddressFilter",
+          "fieldName": "IPAddressFilter",
+          "show": true
+        },
+        {
+          "title": "advanced.specialApplications",
+          "index": "SpecialApp",
+          "fieldName": "SpecialApp",
+          "show": true
+        },
+        {
+          "title": "advanced.DMZSettings",
+          "index": "DMZSetting",
+          "fieldName": "DMZSetting",
+          "show": true
+        },
+        {
+          "title": "advanced.SIPALGSettings",
+          "index": "SIPALGSetting",
+          "fieldName": "SIPALGSetting",
+          "show": true
+        },
+        {
+          "title": "advanced.UPnPSettings",
+          "index": "UPnPSetting",
+          "fieldName": "UPnPSetting",
+          "show": true
+        },
+        {
+          "title": "advanced.domainFilter",
+          "index": "DomainFilter",
+          "fieldName": "DomainFilter",
+          "show": true
+        }
+      ]
+    },
+    {
+      "title": "advanced.system",
+      "index": "System",
+      "fieldName": "System",
+      "show": true,
+      "children": [
+        {
+          "title": "advanced.deviceInformation",
+          "index": "DeviceInfor",
+          "fieldName": "DeviceInfor",
+          "show": true
+        },
+        {
+          "title": "advanced.restart",
+          "index": "Restart",
+          "fieldName": "Restart",
+          "show": true
+        },
+        {
+          "title": "advanced.reset",
+          "index": "Reset",
+          "fieldName": "Reset",
+          "show": true
+        },
+        {
+          "title": "advanced.oneClickCheck",
+          "index": "oneClickCheck",
+          "fieldName": "oneClickCheck",
+          "show": true
+        },
+        {
+          "title": "advanced.diagnosis",
+          "index": "Diagnosis",
+          "fieldName": "Diagnosis",
+          "show": true
+        },
+        {
+          "title": "advanced.modifyPassword",
+          "index": "ModifyPassword",
+          "fieldName": "ModifyPassword",
+          "show": true
+        },
+        {
+          "title": "advanced.PINCodeManagement",
+          "index": "PINCodeManagement",
+          "fieldName": "PINCodeManagement",
+          "show": true
+        },
+        {
+          "title": "advanced.timeSettings",
+          "index": "TimeSettings",
+          "fieldName": "TimeSettings",
+          "show": true
+        },
+        {
+          "title": "advanced.systemSettings",
+          "index": "SystemSettings",
+          "fieldName": "SystemSettings",
+          "show": true
+        }
+      ]
+    }
+  ]
+}

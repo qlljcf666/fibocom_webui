@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[3613],{63613:(e,n,c)=>{c.r(n),c.d(n,{default:()=>f});var l=function(){var e=this,n=e.$createElement,c=e._self._c||n;return c("div",[c("DeviceInfor")],1)},t=[];const r={},s=r;var u=c(1001),o=(0,u.Z)(s,l,t,!1,null,null,null);const f=o.exports}}]);

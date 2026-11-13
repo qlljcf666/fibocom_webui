@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[8794],{58794:(e,t,n)=>{n.r(t),n.d(t,{default:()=>o});var l=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("EthernetStatus")],1)},s=[];const u={},c=u;var r=n(1001),a=(0,r.Z)(c,l,s,!1,null,null,null);const o=a.exports}}]);

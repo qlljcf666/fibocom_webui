@@ -1,0 +1,14 @@
+Package: libfibosocket0
+Version: git-r1
+Description: fibo-socket-client-lib version git-r1
+ fibo-sock-client lib
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: Qualcomm-Technologies-Inc.-Proprietary
+Architecture: armv7vet2hf-neon
+OE: fibo-socket-client-lib
+Homepage: http://support.cdmatech.com
+Depends: diag (>= git), libc6 (>= 2.31+git0+4f0a61f753), libfibo-utils0 (>= git), libsystemdq, libxml2
+Provides: fibo-socket-client-lib
+Source: fibo-socket-client-lib_git.bb

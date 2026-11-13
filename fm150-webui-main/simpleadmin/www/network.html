@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FM150 网络管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <main class="container my-4">
+      <nav class="navbar navbar-expand-lg mt-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><span class="mb-0 h4">FM150 模块管理</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/network.html">网络</a></li>
+              <li class="nav-item"><a class="nav-link" href="/scanner.html">扫描</a></li>
+              <li class="nav-item"><a class="nav-link" href="/settings.html">设置</a></li>
+              <li class="nav-item"><a class="nav-link" href="/sms.html">短信</a></li>
+              <li class="nav-item"><a class="nav-link" href="/fm150.html">FM150 AT</a></li>
+              <li class="nav-item"><a class="nav-link" href="/console">终端</a></li>
+              <li class="nav-item"><a class="nav-link" href="/deviceinfo.html">设备信息</a></li>
+            </ul>
+            <button class="btn btn-outline-primary" id="refresh">刷新状态</button>
+          </div>
+        </div>
+      </nav>
+
+      <div id="notice" class="alert alert-secondary mt-4">正在读取 FM150 网络状态…</div>
+      <div class="row g-3">
+        <div class="col-lg-6"><div class="card h-100"><div class="card-header">当前网络</div><div class="card-body"><table class="table mb-0"><tbody id="network-status"></tbody></table></div></div></div>
+        <div class="col-lg-6"><div class="card h-100"><div class="card-header">FM150 服务小区</div><div class="card-body"><table class="table mb-0"><tbody id="cell-status"></tbody></table></div></div></div>
+      </div>
+
+      <div class="row g-3 mt-1">
+        <div class="col-lg-6"><div class="card h-100"><div class="card-header">网络模式</div><div class="card-body"><p class="text-muted">使用 FM150 的 <code>AT+GTACT</code>，设置后网络会重新注册。</p><div class="d-flex flex-wrap gap-2"><button class="btn btn-outline-primary action" data-at="AT+GTACT=2">仅 4G</button><button class="btn btn-outline-primary action" data-at="AT+GTACT=14">仅 5G</button><button class="btn btn-primary action" data-at="AT+GTACT=20">自动搜索网络</button></div></div></div></div>
+        <div class="col-lg-6"><div class="card h-100"><div class="card-header">SIM 与 USB 拨号</div><div class="card-body"><div class="d-flex flex-wrap gap-2 mb-3"><button class="btn btn-outline-secondary action" data-at="AT+GTDUALSIM=0">使用 SIM 卡 1</button><button class="btn btn-outline-secondary action" data-at="AT+GTDUALSIM=1">使用 SIM 卡 2</button></div><div class="d-flex flex-wrap gap-2"><button class="btn btn-outline-success action" data-at="AT+GTRNDIS=1,1">连接 ECM</button><button class="btn btn-outline-danger action" data-at="AT+GTRNDIS=0,1">断开 ECM</button><button class="btn btn-outline-secondary action" data-at="AT+GTUSBMODE?">查询 USB 模式</button></div></div></div></div>
+      </div>
+
+      <div class="card mt-3"><div class="card-header">APN / PDP 上下文</div><div class="card-body"><p class="text-muted mb-2">当前上下文由 <code>AT+CGDCONT?</code> 查询。为避免以移远专用命令写入错误配置，本页不发送 <code>QNWPREFCFG</code>、<code>QNWLOCK</code> 或 <code>QCAINFO</code>。</p><pre class="mb-0" id="pdp">等待查询…</pre></div></div>
+      <div class="card mt-3"><div class="card-header">操作结果</div><div class="card-body"><pre class="mb-0" id="result">尚未执行操作。</pre></div></div>
+    </main>
+    <script>
+      const endpoint = '/cgi-bin/fm150_at';
+      const text = (id, value) => document.getElementById(id).textContent = value;
+      const esc = value => String(value || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+      const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+      async function at(command) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 20000);
+        try {
+          const r = await fetch(endpoint + '?' + new URLSearchParams({atcmd: command}), {cache:'no-store', signal:controller.signal});
+          const body = await r.text();
+          if (/another AT command is still running/i.test(body)) throw new Error('AT 通道忙');
+          return body;
+        } finally { clearTimeout(timer); }
+      }
+      async function atRetry(command) {
+        let last;
+        for (let i = 0; i < 3; i++) {
+          try { return await at(command); } catch (e) { last = e; await pause(1200); }
+        }
+        throw last;
+      }
+      const line = (label, value) => `<tr><th>${label}</th><td>${esc(value || '未知')}</td></tr>`;
+      const responseLine = (out, prefix) => (out.match(new RegExp('^\\s*' + prefix.replace(/[+?]/g, '\\$&') + '\\s*:?\\s*(.*)$', 'm')) || [,''])[1].trim();
+      function parseCell(raw) {
+        const type = /NR service cell:/i.test(raw) ? 'NR 5G' : /LTE service cell:/i.test(raw) ? 'LTE 4G' : '未知';
+        const row = raw.split(/\r?\n/).find(v => /^\d+,/.test(v.trim())) || '';
+        const f = row.split(',');
+        if (f.length < 9) return {type, raw, tac:'未知', cell:'未知', pci:'未知', arfcn:'未知', plmn:'未知'};
+        const dec = h => /^[0-9a-f]+$/i.test(h) ? String(parseInt(h, 16)) : h;
+        return {type, raw, plmn:(f[2] || '') + (f[3] || ''), tac:f[4] || '未知', cell:dec(f[6] || ''), pci:dec(f[7] || ''), arfcn:f[8] || '未知'};
+      }
+      let refreshing = false;
+      async function refresh() {
+        if (refreshing) return;
+        refreshing = true;
+        document.getElementById('refresh').disabled = true;
+        text('notice', '正在读取 FM150 网络状态…');
+        try {
+          // FM150 的 AT 端口只能一次处理一条命令；必须顺序查询。
+          const rat = await atRetry('AT+PSRAT?');
+          const cell = await atRetry('AT+GTCCINFO?');
+          const pdp = await atRetry('AT+CGDCONT?');
+          const ip = await atRetry('AT+CGPADDR');
+          const usb = await atRetry('AT+GTUSBMODE?');
+          const c = parseCell(cell), mode = responseLine(rat, '+PSRAT') || c.type;
+          const ipv4 = (ip.match(/\+CGPADDR:\s*1,"([0-9.]+)"/) || [,'未知'])[1];
+          document.getElementById('network-status').innerHTML = line('网络模式', mode) + line('MCC/MNC', c.plmn) + line('IPv4', ipv4) + line('USB 模式', responseLine(usb, '+GTUSBMODE') || '未知');
+          document.getElementById('cell-status').innerHTML = line('小区类型', c.type) + line('TAC', c.tac) + line('小区 ID（十进制）', c.cell) + line('PCI（十进制）', c.pci) + line('频点', c.arfcn);
+          text('pdp', pdp.trim()); text('notice', 'FM150 网络状态已更新。');
+        } catch (e) { text('notice', '读取失败：AT 服务暂时忙碌，请点击“刷新状态”自动重试。'); }
+        finally { refreshing = false; document.getElementById('refresh').disabled = false; }
+      }
+      document.getElementById('refresh').onclick = refresh;
+      document.querySelectorAll('.action').forEach(b => b.onclick = async () => { b.disabled = true; text('result', '正在执行：' + b.dataset.at); try { text('result', await atRetry(b.dataset.at)); await pause(5000); await refresh(); } catch(e) { text('result', '操作失败或超时：' + e.message); } finally { b.disabled = false; } });
+      refresh();
+    </script>
+  </body>
+</html>

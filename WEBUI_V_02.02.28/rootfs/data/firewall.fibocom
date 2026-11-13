@@ -1,0 +1,3 @@
+fibo_firewall_switch 1
+fibo_firewall_ping_wan=1
+fibo_firewall_urlfilter_policy=0

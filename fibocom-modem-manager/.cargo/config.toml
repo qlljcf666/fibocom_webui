@@ -1,0 +1,3 @@
+[build]
+# 项目路径包含中文，mingw 链接器无法处理非 ASCII 路径，固定到 ASCII 构建目录
+target-dir = "C:/fibocom-mm-target"

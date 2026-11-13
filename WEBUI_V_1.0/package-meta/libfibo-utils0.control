@@ -1,0 +1,14 @@
+Package: libfibo-utils0
+Version: git-r1
+Description: fibo-utils-lib version git-r1
+ fibo-utils lib
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: Qualcomm-Technologies-Inc.-Proprietary
+Architecture: armv7vet2hf-neon
+OE: fibo-utils-lib
+Homepage: http://support.cdmatech.com
+Depends: diag (>= git), libc6 (>= 2.31+git0+4f0a61f753), libsqlite3-0 (>= 3.31.1), libsystemdq, libxml2
+Provides: fibo-utils-lib
+Source: fibo-utils-lib_git.bb

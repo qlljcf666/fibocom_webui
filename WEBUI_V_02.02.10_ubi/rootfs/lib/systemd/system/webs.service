@@ -1,0 +1,18 @@
+[Unit]
+Description=webs service
+SourcePath=/etc/initscripts/webs-deamon
+After=init_sys_mss.service ipacm.service netmgrd.service 
+DefaultDependencies=no
+Before=persist-mount.service
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/bin/sh /etc/initscripts/webs-deamon
+ExecStop=/bin/sh /etc/initscripts/webs-stop
+Restart=always
+Nice=-20
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Compatibility entry point for legacy pages.  Resolve its sibling so the
+# standalone installation does not depend on a Simple Admin path.
+exec "$(dirname "$0")/fm150_at"

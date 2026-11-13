@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fibocom 模组管理 · 连接与工具</title>
+<style>
+:root{
+  --primary:#409eff;
+  --primary-dark:#2383e6;
+  --text:#303133;
+  --text-light:#606266;
+  --tip:#909399;
+  --border:#e4e7ed;
+  --bg:#f2f5fa;
+  --ok:#67c23a;
+  --warn:#e6a23c;
+  --err:#f56c6c;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;font-size:14px}
+.app{max-width:1180px;margin:0 auto;padding:22px 22px 40px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:linear-gradient(120deg,#3a8ee6,#2f6fd0);color:#fff;border-radius:12px;
+  padding:18px 24px;box-shadow:0 10px 24px rgba(47,111,208,.25)}
+header h1{margin:0;font-size:19px;font-weight:600;letter-spacing:.5px}
+header .sub{margin-top:4px;font-size:12px;opacity:.85}
+header .right{display:flex;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:20px;
+  background:rgba(255,255,255,.16);font-size:12px}
+.dot{width:8px;height:8px;border-radius:50%;background:#c0c4cc}
+.dot.on{background:#7ee787;box-shadow:0 0 8px #7ee787}
+.ghost-link{color:#fff;font-size:12px;text-decoration:none;border:1px solid rgba(255,255,255,.45);
+  padding:6px 12px;border-radius:18px;white-space:nowrap}
+.ghost-link:hover{background:rgba(255,255,255,.15)}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:18px}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(64,158,255,.08);
+  border:1px solid #edf1f7;overflow:hidden}
+.card-h{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+  border-bottom:1px solid #f0f3f8;background:#fbfcff}
+.card-h b{font-size:15px;font-weight:600}
+.card-h .hint{font-size:12px;color:var(--tip)}
+.card-b{padding:18px}
+label{display:block;font-size:12px;color:var(--text-light);margin-bottom:6px}
+input,select{width:100%;height:36px;border:1px solid var(--border);border-radius:8px;
+  padding:0 10px;font-size:13px;color:var(--text);background:#fff;outline:none}
+input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 2px rgba(64,158,255,.12)}
+.row{display:grid;gap:12px;margin-bottom:14px}
+.row.c2{grid-template-columns:1fr 1fr}
+.row.c3{grid-template-columns:1fr 1fr 1fr}
+.tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:7px 14px;border-radius:18px;border:1px solid var(--border);background:#fff;
+  font-size:13px;cursor:pointer;color:var(--text-light)}
+.tab.active{background:rgba(64,158,255,.1);border-color:var(--primary);color:var(--primary);font-weight:600}
+.btn{height:36px;padding:0 16px;border-radius:8px;border:1px solid var(--border);
+  background:#fff;color:var(--text);font-size:13px;cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--primary);color:var(--primary)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-dark);border-color:var(--primary-dark);color:#fff}
+.btn.danger{background:#fff;border-color:#fbc4c4;color:var(--err)}
+.btn.danger:hover{background:#fef0f0}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.sm{height:30px;padding:0 12px;font-size:12px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.status{margin-top:16px;border:1px solid #edf1f7;border-radius:10px;overflow:hidden}
+.status .line{display:flex;justify-content:space-between;padding:8px 12px;font-size:12.5px;border-bottom:1px solid #f3f6fa}
+.status .line:last-child{border-bottom:none}
+.status .k{color:var(--tip)}
+.status .v{color:var(--text);max-width:62%;text-align:right;word-break:break-all}
+.alert{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:12.5px;line-height:1.6;display:none}
+.alert.show{display:block}
+.alert.ok{background:#f0f9eb;color:#529b2e;border:1px solid #e1f3d8}
+.alert.err{background:#fef0f0;color:#c45656;border:1px solid #fde2e2}
+.alert.info{background:#ecf5ff;color:#337ecc;border:1px solid #d9ecff}
+.mode-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mode-btn{padding:12px;border-radius:10px;border:1px solid var(--border);background:#fff;
+  text-align:left;cursor:pointer;transition:.15s}
+.mode-btn:hover{border-color:var(--primary);box-shadow:0 4px 12px rgba(64,158,255,.12)}
+.mode-btn b{display:block;font-size:13.5px;margin-bottom:3px}
+.mode-btn span{font-size:11.5px;color:var(--tip)}
+.mode-btn.disabled{opacity:.45;pointer-events:none}
+.section-title{font-size:12px;color:var(--tip);margin:18px 0 10px;letter-spacing:.4px}
+.kv{font-size:12px;color:var(--text-light);background:#fafbfe;border:1px dashed #dfe6f1;
+  border-radius:8px;padding:10px 12px;line-height:1.7;margin-top:10px}
+footer{display:flex;justify-content:space-between;align-items:center;margin-top:22px;
+  color:var(--tip);font-size:11.5px}
+.log{max-height:150px;overflow:auto;background:#0f172a;color:#c9d6ee;border-radius:8px;
+  padding:10px 12px;font-family:Consolas,monospace;font-size:12px;line-height:1.6;display:none;margin-top:12px}
+.log.show{display:block}
+.loading{position:fixed;inset:0;background:rgba(255,255,255,.6);display:none;align-items:center;
+  justify-content:center;z-index:99}
+.loading.show{display:flex}
+.spinner{width:34px;height:34px;border-radius:50%;border:3px solid #d9ecff;border-top-color:var(--primary);
+  animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Fibocom 模组管理 · 连接与工具</h1>
+      <div class="sub">FM650 / FM652 / FM350 / FM150AE / FM160 / FM170 / FM190</div>
+    </div>
+    <div class="right">
+      <span class="pill"><span class="dot" id="connDot"></span><span id="connText">未连接</span></span>
+      <a class="ghost-link" href="/" target="_blank">打开原厂管理界面</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-h"><b>连接管理</b><span class="hint">串口 / AT over Ethernet</span></div>
+      <div class="card-b">
+        <div class="tabs">
+          <div class="tab active" data-tab="auto">自动识别串口</div>
+          <div class="tab" data-tab="serial">手动串口</div>
+          <div class="tab" data-tab="net">AT over Ethernet</div>
+        </div>
+
+        <div id="pane-auto">
+          <div class="bar">
+            <button class="btn primary" onclick="autoDetect()">扫描并自动识别</button>
+            <button class="btn" onclick="loadPorts()">刷新串口列表</button>
+          </div>
+          <div class="kv" id="autoResult">点击“扫描并自动识别”，工具会逐个探测 USB 串口并发送 AT 指令，识别 Fibocom 模组后自动连接。</div>
+        </div>
+
+        <div id="pane-serial" style="display:none">
+          <div class="row c2">
+            <div><label>串口</label><select id="portSel"></select></div>
+            <div><label>波特率</label>
+              <select id="baudSel">
+                <option>9600</option><option>19200</option><option>38400</option>
+                <option>57600</option><option selected>115200</option>
+                <option>230400</option><option>460800</option><option>921600</option>
+              </select>
+            </div>
+          </div>
+          <div class="row c3">
+            <div><label>校验位</label>
+              <select id="paritySel"><option value="none">无</option><option value="even">偶校验</option><option value="odd">奇校验</option></select>
+            </div>
+            <div><label>停止位</label>
+              <select id="stopSel"><option value="1">1</option><option value="2">2</option></select>
+            </div>
+            <div><label>流控</label>
+              <select id="flowSel"><option value="none">无</option><option value="hardware">硬件</option><option value="software">软件</option></select>
+            </div>
+          </div>
+          <div class="bar">
+            <button class="btn" onclick="probePort()">探测该串口</button>
+            <button class="btn primary" onclick="connectSerial()">连接</button>
+          </div>
+        </div>
+
+        <div id="pane-net" style="display:none">
+          <div class="row c3">
+            <div><label>协议</label>
+              <select id="netProto"><option value="udp">UDP</option><option value="tcp">TCP</option></select>
+            </div>
+            <div><label>地址</label><input id="netHost" value="192.168.1.1"></div>
+            <div><label>端口</label><input id="netPort" value="5555"></div>
+          </div>
+          <div class="bar">
+            <button class="btn primary" onclick="connectNet()">连接</button>
+            <button class="btn" onclick="disconnect()">断开</button>
+          </div>
+          <div class="kv">Fibocom F1 系列 AT over Ethernet 默认使用 UDP 192.168.1.1:5555。请先将电脑网口与模组网口连接，并确保电脑 IP 与模组在同一网段。</div>
+        </div>
+
+        <div class="alert" id="connAlert"></div>
+
+        <div class="status" id="statusBox">
+          <div class="line"><span class="k">模组型号</span><span class="v" id="stModel">-</span></div>
+          <div class="line"><span class="k">厂商 / 固件</span><span class="v" id="stFw">-</span></div>
+          <div class="line"><span class="k">IMEI</span><span class="v" id="stImei">-</span></div>
+          <div class="line"><span class="k">ICCID</span><span class="v" id="stIccid">-</span></div>
+          <div class="line"><span class="k">运营商 / 网络</span><span class="v" id="stNet">-</span></div>
+          <div class="line"><span class="k">信号</span><span class="v" id="stSignal">-</span></div>
+          <div class="line"><span class="k">IPv4</span><span class="v" id="stIp">-</span></div>
+          <div class="line"><span class="k">当前 USB 模式</span><span class="v" id="stUsb">-</span></div>
+        </div>
+
+        <div class="bar" style="margin-top:14px">
+          <button class="btn danger" onclick="disconnect()">断开连接</button>
+          <button class="btn" onclick="refreshAll()">刷新状态</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><b>快捷设置</b><span class="hint">USB 网卡 / 路由模式</span></div>
+      <div class="card-b">
+        <div class="section-title">一键切换 USB 组合（重启后生效）</div>
+        <div class="mode-btns" id="modeBtns"></div>
+
+        <div class="section-title">自定义 USB 模式（高级）</div>
+        <div class="row c3">
+          <div><label>USB 模式值</label><input id="customMode" placeholder="如 24 / 39 / 41"></div>
+          <div style="display:flex;align-items:flex-end;gap:8px;grid-column:span 2">
+            <button class="btn" onclick="applyCustomMode()">应用自定义模式</button>
+            <button class="btn" onclick="queryMode()">查询当前模式</button>
+          </div>
+        </div>
+
+        <div class="section-title">APN 与拨号参数</div>
+        <div class="row c3">
+          <div><label>APN（可留空）</label><input id="apnInput" placeholder="如 cmnet / 3gnet"></div>
+          <div><label>CID</label><input id="cidInput" value="1"></div>
+          <div><label>应用后重启</label>
+            <select id="rebootSel"><option value="0">否（稍后手动重启）</option><option value="1" selected>是</option></select>
+          </div>
+        </div>
+        <div class="bar">
+          <button class="btn primary" onclick="applyMode('rndis_adb')">一键设置带 ADB 的 RNDIS 模式</button>
+          <button class="btn" onclick="applyMode('rndis')">仅设置 RNDIS（路由）</button>
+          <button class="btn" onclick="setApnOnly()">仅写入 APN</button>
+          <button class="btn" onclick="rebootModem()">重启模组</button>
+        </div>
+
+        <div class="alert info show" style="display:block;margin-top:14px">
+          <b>路由模式说明：</b>模组作为 USB 网卡（RNDIS / ECM）时，会通过 DHCP 给电脑分配 IP 并自行完成拨号，相当于“路由模式”。
+          带 ADB 的组合会同时暴露 adb 调试端口，便于抓日志与调试。切换 USB 组合必须重启模组才能生效。
+        </div>
+
+        <div class="alert" id="modeAlert"></div>
+        <pre class="log" id="modeLog"></pre>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>本地管理工具 · 原厂 WebUI 界面与排版保持一致</span>
+    <button class="btn sm danger" onclick="exitApp()">退出工具</button>
+  </footer>
+</div>
+
+<div class="loading" id="loading"><div class="spinner"></div></div>
+
+<script>
+(function(){
+  var statusData = null;
+  var modeOptions = {};
+
+  function hb(){ fetch('/local/api/heartbeat',{cache:'no-store'}).catch(function(){}); }
+  hb(); setInterval(hb, 10000);
+
+  async function rpc(method, params){
+    var res = await fetch('/fibo/webapi', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({jsonrpc:'2.0', method:method, params:params||{}, id:'local'})
+    });
+    var data = await res.json();
+    if (data.error) { var e = new Error(data.error.message || '操作失败'); e.code = data.error.code; throw e; }
+    return data.result;
+  }
+
+  function show(el, msg, type){
+    var box = document.getElementById(el);
+    box.className = 'alert show ' + (type || 'info');
+    box.innerHTML = msg;
+  }
+  function hide(el){ document.getElementById(el).className = 'alert'; }
+  function loading(on){ document.getElementById('loading').className = on ? 'loading show' : 'loading'; }
+  function esc(v){ return (v===undefined||v===null||v==='') ? '-' : String(v); }
+
+  window.addEventListener('error', function(){ loading(false); });
+
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.onclick = function(){
+      document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      ['auto','serial','net'].forEach(function(k){
+        document.getElementById('pane-'+k).style.display = (k===t.dataset.tab) ? '' : 'none';
+      });
+    };
+  });
+
+  window.loadPorts = async function(){
+    try{
+      var r = await rpc('LocalListPorts');
+      var sel = document.getElementById('portSel');
+      sel.innerHTML = '';
+      (r.ports||[]).forEach(function(p){
+        var o = document.createElement('option');
+        o.value = p.port;
+        o.textContent = p.port + '  ' + (p.description||'') + (p.fibocom ? '  [Fibocom]' : '');
+        sel.appendChild(o);
+      });
+      if (!r.ports || !r.ports.length) {
+        var o = document.createElement('option');
+        o.textContent = '未发现串口';
+        sel.appendChild(o);
+      }
+    }catch(e){ /* ignore */ }
+  };
+
+  window.probePort = async function(){
+    var port = document.getElementById('portSel').value;
+    if (!port) return;
+    loading(true);
+    try{
+      var r = await rpc('LocalProbe', {port:port});
+      show('connAlert', '探测成功：' + esc(r.model) + '（' + esc(r.manufacturer) + '），波特率 ' + esc(r.baud), 'ok');
+    }catch(e){
+      show('connAlert', '探测失败：' + e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.autoDetect = async function(){
+    loading(true);
+    document.getElementById('autoResult').textContent = '正在扫描串口并发送 AT 探测…';
+    try{
+      var spec = await rpc('LocalAutoDetect');
+      document.getElementById('autoResult').textContent =
+        '已识别：' + spec.port + ' @ ' + spec.baud + '，正在连接…';
+      var r = await rpc('LocalConnect', spec);
+      document.getElementById('autoResult').textContent =
+        '连接成功：' + esc(r.model) + '（' + esc(r.transport) + '）';
+      show('connAlert', '自动识别并连接成功：' + esc(r.model), 'ok');
+      await refreshAll();
+    }catch(e){
+      document.getElementById('autoResult').textContent = '自动识别失败：' + e.message;
+      show('connAlert', e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.connectSerial = async function(){
+    var port = document.getElementById('portSel').value;
+    if (!port) { show('connAlert','请选择串口','err'); return; }
+    loading(true);
+    try{
+      var spec = {
+        type:'Serial', port:port,
+        baud: parseInt(document.getElementById('baudSel').value,10),
+        parity: document.getElementById('paritySel').value,
+        stop_bits: parseInt(document.getElementById('stopSel').value,10),
+        flow: document.getElementById('flowSel').value
+      };
+      var r = await rpc('LocalConnect', spec);
+      show('connAlert', '连接成功：' + esc(r.model) + (r.supported ? '（已支持机型）' : '（未在支持列表，使用通用命令）'), 'ok');
+      await refreshAll();
+    }catch(e){
+      show('connAlert', '连接失败：' + e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.connectNet = async function(){
+    var proto = document.getElementById('netProto').value;
+    var host = document.getElementById('netHost').value.trim();
+    var port = parseInt(document.getElementById('netPort').value,10);
+    if (!host || !port) { show('connAlert','请输入地址和端口','err'); return; }
+    loading(true);
+    try{
+      var spec = { type: proto === 'tcp' ? 'Tcp' : 'Udp', host: host, port: port };
+      var r = await rpc('LocalConnect', spec);
+      show('connAlert', '连接成功：' + esc(r.model) + '（' + esc(r.transport) + '）', 'ok');
+      await refreshAll();
+    }catch(e){
+      show('connAlert', '连接失败：' + e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.disconnect = async function(){
+    try{
+      await rpc('LocalDisconnect');
+      show('connAlert', '已断开连接', 'info');
+      await refreshAll();
+    }catch(e){ show('connAlert', e.message, 'err'); }
+  };
+
+  function renderStatus(s){
+    statusData = s;
+    var connected = s.connected;
+    document.getElementById('connDot').className = 'dot' + (connected ? ' on' : '');
+    document.getElementById('connText').textContent = connected ? '已连接' : '未连接';
+    document.getElementById('stModel').textContent = esc(s.model);
+    document.getElementById('stFw').textContent = esc(s.manufacturer) + ' / ' + esc(s.fw);
+    document.getElementById('stImei').textContent = esc(s.imei);
+    document.getElementById('stIccid').textContent = esc(s.iccid);
+    document.getElementById('stNet').textContent = esc(s.operator) + ' / ' + esc(s.rat);
+    document.getElementById('stSignal').textContent = esc(s.signal);
+    document.getElementById('stIp').textContent = esc(s.ipv4);
+    document.getElementById('stUsb').textContent = esc(s.usbMode);
+    renderModes(s.profileInfo && s.profileInfo.family ? {
+      rndis_adb: s.profileInfo.rndis_adb, ecm_adb: s.profileInfo.ecm_adb,
+      ncm_adb: s.profileInfo.ncm_adb, mbim_adb: s.profileInfo.mbim_adb,
+      mbim: s.profileInfo.mbim, rndis: s.profileInfo.rndis
+    } : null);
+  }
+
+  function renderModes(opts){
+    var box = document.getElementById('modeBtns');
+    box.innerHTML = '';
+    var list = [
+      {key:'rndis_adb', name:'RNDIS + ADB', desc:'Windows 免驱网卡，带 adb 调试'},
+      {key:'ecm_adb', name:'ECM + ADB', desc:'Linux/Windows ECM 网卡，带 adb'},
+      {key:'ncm_adb', name:'NCM + ADB', desc:'NCM 网卡组合，带 adb'},
+      {key:'mbim_adb', name:'MBIM + ADB', desc:'MBIM 网卡，带 adb'},
+      {key:'mbim', name:'MBIM', desc:'标准 MBIM 网卡，无 adb'},
+      {key:'rndis', name:'RNDIS（无 ADB）', desc:'纯 RNDIS 路由网卡'}
+    ];
+    list.forEach(function(m){
+      var mode = opts ? opts[m.key] : null;
+      var b = document.createElement('button');
+      b.className = 'mode-btn' + (mode ? '' : ' disabled');
+      b.innerHTML = '<b>' + m.name + '</b><span>' + (mode ? 'USB 模式值 ' + mode : '当前机型不支持') + ' · ' + m.desc + '</span>';
+      if (mode) b.onclick = function(){ applyMode(m.key); };
+      box.appendChild(b);
+    });
+  }
+
+  window.applyMode = async function(preset){
+    var apn = document.getElementById('apnInput').value.trim();
+    var cid = parseInt(document.getElementById('cidInput').value,10) || 1;
+    var reboot = document.getElementById('rebootSel').value === '1';
+    loading(true); hide('modeAlert');
+    try{
+      var r = await rpc('LocalQuickMode', {preset:preset, apn:apn, cid:cid, reboot:reboot});
+      show('modeAlert', '设置成功，USB 模式已切换为 ' + r.mode + (r.reboot ? '，模组正在重启…' : ''), 'ok');
+      var log = document.getElementById('modeLog');
+      log.className = 'log show';
+      log.textContent = (r.steps||[]).join('\n');
+    }catch(e){
+      show('modeAlert', '设置失败：' + e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.applyCustomMode = async function(){
+    var mode = parseInt(document.getElementById('customMode').value,10);
+    if (!mode) { show('modeAlert','请输入 USB 模式值','err'); return; }
+    var reboot = document.getElementById('rebootSel').value === '1';
+    loading(true); hide('modeAlert');
+    try{
+      await rpc('LocalSetUsbMode', {mode:mode});
+      if (reboot) { await rpc('LocalReboot'); }
+      show('modeAlert', '已设置 USB 模式 ' + mode + (reboot ? '，模组正在重启…' : ''), 'ok');
+      document.getElementById('stUsb').textContent = mode;
+    }catch(e){
+      show('modeAlert', '设置失败：' + e.message, 'err');
+    }finally{ loading(false); }
+  };
+
+  window.queryMode = async function(){
+    try{
+      var u = await rpc('LocalGetUsbMode');
+      document.getElementById('stUsb').textContent = u.mode || '-';
+      if (u.options) renderModes(u.options);
+      show('modeAlert', '当前 USB 模式：' + (u.mode || '未知'), 'info');
+    }catch(e){ show('modeAlert', e.message, 'err'); }
+  };
+
+  window.setApnOnly = async function(){
+    var apn = document.getElementById('apnInput').value.trim();
+    var cid = parseInt(document.getElementById('cidInput').value,10) || 1;
+    if (!apn) { show('modeAlert','请输入 APN','err'); return; }
+    try{
+      await rpc('LocalSetApn', {apn:apn, cid:cid});
+      show('modeAlert', 'APN 已写入 CID ' + cid + '：' + apn, 'ok');
+    }catch(e){ show('modeAlert', '写入失败：' + e.message, 'err'); }
+  };
+
+  window.rebootModem = async function(){
+    if (!confirm('确定重启模组？重启期间连接会中断。')) return;
+    try{
+      await rpc('LocalReboot');
+      show('modeAlert', '重启指令已发送，请等待模组重新枚举串口。', 'info');
+    }catch(e){ show('modeAlert', e.message, 'err'); }
+  };
+
+  window.refreshAll = async function(){
+    try{
+      var s = await rpc('LocalStatus');
+      renderStatus(s);
+      try{
+        var u = await rpc('LocalGetUsbMode');
+        if (u.mode) document.getElementById('stUsb').textContent = u.mode;
+        if (u.options) renderModes(u.options);
+      }catch(e){}
+    }catch(e){}
+  };
+
+  window.exitApp = async function(){
+    if (!confirm('确定退出工具？后台服务将同时关闭。')) return;
+    try{ await rpc('LocalExit'); }catch(e){}
+    setTimeout(function(){ window.close(); }, 300);
+  };
+
+  loadPorts();
+  refreshAll();
+  setInterval(refreshAll, 4000);
+})();
+</script>
+</body>
+</html>

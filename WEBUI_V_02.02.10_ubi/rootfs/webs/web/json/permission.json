@@ -1,0 +1,1386 @@
+{
+    "navs": [
+        {
+            "title": "home.home",
+            "icon": "fibocom icon-31shouye",
+            "index": "Home",
+            "show": true
+        },
+        {
+            "title": "networkSettings.networkSettings",
+            "icon": "fibocom icon-wangluo",
+            "show": true,
+            "index": "MobileNetworkSetting"
+        },
+        {
+            "title": "wifiSettings.wifiSettings",
+            "icon": "fibocom icon-xinhao",
+            "show": true,
+            "index": "WLAN"
+        },
+        {
+            "title": "devices.devices",
+            "icon": "fibocom icon-shebeiguanli",
+            "show": true,
+            "index": "Terminal"
+        },
+        {
+            "title": "tools.tools",
+            "icon": "fibocom icon-gongjuxiang",
+            "show": true,
+            "index": "Tools"
+        },
+        {
+            "title": "advanced.advanced",
+            "icon": "fibocom icon-shezhi",
+            "show": true,
+            "index": "Advanced"
+        }
+    ],
+    "FM160_NA_Navs": [
+        {
+            "title": "home.home",
+            "icon": "fibocom icon-31shouye",
+            "index": "Home",
+            "show": true
+        },
+        {
+            "title": "networkSettings.networkSettings",
+            "icon": "fibocom icon-wangluo",
+            "show": true,
+            "index": "NetWork"
+        },
+        {
+            "title": "wifiSettings.wifiSettings",
+            "icon": "fibocom icon-xinhao",
+            "show": false,
+            "index": "WLAN"
+        },
+        {
+            "title": "devices.devices",
+            "icon": "fibocom icon-shebeiguanli",
+            "show": false,
+            "index": "Terminal"
+        },
+        {
+            "title": "tools.tools",
+            "icon": "fibocom icon-gongjuxiang",
+            "show": true,
+            "index": "Tools"
+        },
+        {
+            "title": "advanced.advanced",
+            "icon": "fibocom icon-shezhi",
+            "show": true,
+            "index": "Advanced"
+        }
+    ],
+    "netWorkMenu": [
+        {
+            "title": "networkSettings.mobileNetwork",
+            "index": "MobileNetwork",
+            "show": true,
+            "children": [
+                {
+                    "title": "networkSettings.internetConnection",
+                    "index": "MobileNetworkSetting",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.mobileNetworkSearching",
+                    "index": "MobileNetworkSearch",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "networkSettings.ethernet",
+            "index": "Ethernet",
+            "show": true,
+            "children": [
+                {
+                    "title": "networkSettings.ethernetSettings",
+                    "index": "EthernetSet",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.ethernetStatus",
+                    "index": "EthernetStatus",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FM160netWorkMenu": [
+        {
+            "title": "networkSettings.mobileNetwork",
+            "index": "MobileNetwork",
+            "show": true,
+            "children": [
+                {
+                    "title": "networkSettings.networkInfo",
+                    "index": "NetWorkInfo",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.internetConnection",
+                    "index": "MobileNetworkSetting",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.mobileNetworkSearching",
+                    "index": "MobileNetworkSearch",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FG101netWorkMenu": [
+        {
+            "title": "networkSettings.mobileNetwork",
+            "index": "MobileNetwork",
+            "show": true,
+            "children": [
+                {
+                    "title": "networkSettings.internetConnection",
+                    "index": "MobileNetworkSetting",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.mobileNetworkSearching",
+                    "index": "MobileNetworkSearch",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FG160netWorkMenu": [
+        {
+            "title": "networkSettings.mobileNetwork",
+            "index": "MobileNetwork",
+            "show": true,
+            "children": [
+                {
+                    "title": "networkSettings.internetConnection",
+                    "index": "MobileNetworkSetting",
+                    "show": true
+                },
+                {
+                    "title": "networkSettings.mobileNetworkSearching",
+                    "index": "MobileNetworkSearch",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "mobileNetworkMenu": [
+        {
+            "title": "networkSettings.internetConnection",
+            "index": "MobileNetworkSetting",
+            "show": true
+        },
+        {
+            "title": "networkSettings.mobileNetworkSearching",
+            "index": "MobileNetworkSearch",
+            "show": true
+        }
+    ],
+    "wlanSetMenu": [
+        {
+            "title": "wifiSettings.wifiBasicSettings",
+            "index": "WlanEasySet",
+            "show": true
+        },
+        {
+            "title": "wifiSettings.guestWiFi",
+            "index": "GuestWlan",
+            "show": true
+        }
+    ],
+    "toolsMenu": [
+        {
+            "title": "tools.SMS",
+            "index": "SMS",
+            "show": true,
+            "children": [
+                {
+                    "title": "tools.SMSConversation",
+                    "index": "SMSSession",
+                    "show": true
+                },
+                {
+                    "title": "tools.SMSSettings",
+                    "index": "SMSSetting",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "tools.statistics",
+            "index": "Flow",
+            "show": true
+        },
+        {
+            "title": "tools.parentalControl",
+            "index": "ChildProtect",
+            "show": true
+        }
+    ],
+    "FG101T_RLWlanSetMenu": [
+        {
+            "title": "wifiSettings.wifiBasicSettings",
+            "index": "WlanEasySet",
+            "show": true
+        },
+        {
+            "title": "wifiSettings.guestWiFi",
+            "index": "GuestWlan",
+            "show": false
+        }
+    ],
+    "FM160ToolsMenu": [
+        {
+            "title": "tools.SMS",
+            "index": "SMS",
+            "show": true,
+            "children": [
+                {
+                    "title": "tools.SMSConversation",
+                    "index": "SMSSession",
+                    "show": true
+                },
+                {
+                    "title": "tools.SMSSettings",
+                    "index": "SMSSetting",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "tools.statistics",
+            "index": "Flow",
+            "show": true
+        }
+    ],
+    "SMSMenu": [
+        {
+            "title": "tools.SMSConversation",
+            "index": "SMSSession",
+            "show": true
+        },
+        {
+            "title": "tools.SMSSettings",
+            "index": "SMSSetting",
+            "show": true
+        },
+        {
+            "title": "tools.SMSConversation",
+            "index": "SMSSession",
+            "show": true
+        }
+    ],
+    "advancedMenu": [
+        {
+            "title": "advanced.WiFi",
+            "index": "WLANSet",
+            "show": true
+        },
+        {
+            "title": "advanced.updates",
+            "index": "UpDates",
+            "show": true
+        },
+        {
+            "title": "advanced.route",
+            "index": "Route",
+            "show": true
+        },
+        {
+            "title": "advanced.security",
+            "index": "Security",
+            "show": true
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "show": true
+        }
+    ],
+    "networkSettings": {
+        "mobileNetwork": {
+            "fieldName": "移动网路",
+            "show": true
+        },
+        "ethernet": {
+            "fieldName": "以太网",
+            "show": false
+        },
+        "internetConnection": {
+            "fieldName": "移动网络设置",
+            "show": true
+        },
+        "mobileNetworkSearching": {
+            "fieldName": "移动网络搜索",
+            "show": true
+        },
+        "ethernetSettings": {
+            "fieldName": "以太网设置",
+            "show": true
+        },
+        "ethernetStatus": {
+            "fieldName": "以太网状态",
+            "show": true
+        },
+        "mobileData": {
+            "fieldName": "移动数据",
+            "show": true
+        },
+        "dataRoaming": {
+            "fieldName": "漫游数据",
+            "show": true
+        },
+        "autoNetwork": {
+            "fieldName": "自动选择网络",
+            "show": true
+        }
+    },
+    "wifiSettings": {
+        "wifiBasicSettings": {
+            "fieldName": "WLAN 简易设置",
+            "show": true
+        },
+        "guestWiFi": {
+            "fieldName": "客人 WLAN",
+            "show": true
+        }
+    },
+    "tools": {
+        "SMS": {
+            "fieldName": "短信",
+            "show": true
+        },
+        "SMSSub": {
+            "SMSConversation": {
+                "fieldName": "短信会话",
+                "show": true
+            },
+            "SMSSettings": {
+                "fieldName": "短信设置",
+                "show": true
+            }
+        },
+        "statistics": {
+            "fieldName": "流量统计",
+            "show": true
+        },
+        "parentalControl": {
+            "fieldName": "儿童上网保护",
+            "show": false
+        }
+    },
+    "advanced": {
+        "WiFi": {
+            "fieldName": "WLAN",
+            "show": true
+        },
+        "WiFiSub": {
+            "WiFiAdvancedSettings": {
+                "fieldName": "WLAN 高级设置",
+                "show": true
+            },
+            "WiFiSecuritySettings": {
+                "fieldName": "WLAN 安全设置",
+                "show": true
+            },
+            "WiFiMACFilter": {
+                "fieldName": "WLAN MAC 地址过滤",
+                "show": true
+            },
+            "WiFiWPS": {
+                "fieldName": "WLAN WPS",
+                "show": true
+            }
+        },
+        "updates": {
+            "fieldName": "版本更新",
+            "show": true
+        },
+        "route": {
+            "fieldName": "路由",
+            "show": true
+        },
+        "routeSub": {
+            "DHCP": {
+                "fieldName": "DHCP",
+                "show": true
+            },
+            "DDNS": {
+                "fieldName": "动态域名服务",
+                "show": true
+            },
+            "VPN": {
+                "fieldName": "VPN",
+                "show": true
+            }
+        },
+        "security": {
+            "fieldName": "安全",
+            "show": true
+        },
+        "securitySub": {
+            "firewall": {
+                "fieldName": "防火墙",
+                "show": true
+            },
+            "MACAddressFilter": {
+                "fieldName": "MAC 地址过滤",
+                "show": true
+            },
+            "IPFilter": {
+                "fieldName": "IP 地址过滤",
+                "show": true
+            },
+            "specialApplications": {
+                "fieldName": "特殊应用程序",
+                "show": true
+            },
+            "DMZSettings": {
+                "fieldName": "DMZ 设置",
+                "show": true
+            },
+            "SIPALGSettings": {
+                "fieldName": "SIP ALG 设置",
+                "show": true
+            },
+            "UPnPSettings": {
+                "fieldName": "UPnP 设置",
+                "show": true
+            },
+            "domainFilter": {
+                "fieldName": "域名过滤",
+                "show": true
+            }
+        },
+        "system": {
+            "fieldName": "系统",
+            "show": true
+        },
+        "systemSub": {
+            "deviceInformation": {
+                "fieldName": "设备信息",
+                "show": true
+            },
+            "restart": {
+                "fieldName": "重启",
+                "show": true
+            },
+            "reset": {
+                "fieldName": "恢复出厂设置",
+                "show": true
+            },
+            "oneClickCheck": {
+                "fieldName": "一键检测",
+                "show": true
+            },
+            "diagnosis": {
+                "fieldName": "诊断",
+                "show": true
+            },
+            "modifyPassword": {
+                "fieldName": "修改密码",
+                "show": true
+            },
+            "PINCodeManagement": {
+                "fieldName": "PIN 码管理",
+                "show": true
+            },
+            "timeSettings": {
+                "fieldName": "时间服务设置",
+                "show": true
+            },
+            "systemSettings": {
+                "fieldName": "系统设置",
+                "show": true
+            }
+        }
+    },
+    "advancedMeauList": [
+        {
+            "title": "advanced.WiFi",
+            "index": "WlanSet",
+            "fieldName": "WLAN",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.WiFiAdvancedSettings",
+                    "index": "WiFiAdvancedSettings",
+                    "fieldName": "WiFiAdvancedSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiSecuritySettings",
+                    "index": "WiFiSecuritySettings",
+                    "fieldName": "WiFiSecuritySettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiMACFilter",
+                    "index": "WiFiMACFilter",
+                    "fieldName": "WiFiMACFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiWPS",
+                    "index": "WiFiWPS",
+                    "fieldName": "WiFiWPS",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.updates",
+            "index": "UpDate",
+            "fieldName": "UpDate",
+            "show": true
+        },
+        {
+            "title": "advanced.route",
+            "index": "Route",
+            "fieldName": "Route",
+            "show": true,
+            "children": [
+                {
+                    "title": "DHCP",
+                    "index": "DHCP",
+                    "fieldName": "DHCP",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DDNS",
+                    "index": "DDNS",
+                    "fieldName": "DDNS",
+                    "show": true
+                },
+                {
+                    "title": "VPN",
+                    "index": "VPN",
+                    "fieldName": "VPN",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.security",
+            "index": "Security",
+            "fieldName": "Security",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.firewall",
+                    "index": "Firewall",
+                    "fieldName": "Firewall",
+                    "show": true
+                },
+                {
+                    "title": "advanced.MACAddressFilter",
+                    "index": "MACAddressFilter",
+                    "fieldName": "MACAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.IPFilter",
+                    "index": "IPAddressFilter",
+                    "fieldName": "IPAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.specialApplications",
+                    "index": "SpecialApp",
+                    "fieldName": "SpecialApp",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DMZSettings",
+                    "index": "DMZSetting",
+                    "fieldName": "DMZSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.SIPALGSettings",
+                    "index": "SIPALGSetting",
+                    "fieldName": "SIPALGSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.UPnPSettings",
+                    "index": "UPnPSetting",
+                    "fieldName": "UPnPSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.domainFilter",
+                    "index": "DomainFilter",
+                    "fieldName": "DomainFilter",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "fieldName": "System",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.deviceInformation",
+                    "index": "DeviceInfor",
+                    "fieldName": "DeviceInfor",
+                    "show": true
+                },
+                {
+                    "title": "advanced.restart",
+                    "index": "Restart",
+                    "fieldName": "Restart",
+                    "show": true
+                },
+                {
+                    "title": "advanced.reset",
+                    "index": "Reset",
+                    "fieldName": "Reset",
+                    "show": true
+                },
+                {
+                    "title": "advanced.oneClickCheck",
+                    "index": "oneClickCheck",
+                    "fieldName": "oneClickCheck",
+                    "show": true
+                },
+                {
+                    "title": "advanced.diagnosis",
+                    "index": "Diagnosis",
+                    "fieldName": "Diagnosis",
+                    "show": true
+                },
+                {
+                    "title": "advanced.modifyPassword",
+                    "index": "ModifyPassword",
+                    "fieldName": "ModifyPassword",
+                    "show": true
+                },
+                {
+                    "title": "advanced.PINCodeManagement",
+                    "index": "PINCodeManagement",
+                    "fieldName": "PINCodeManagement",
+                    "show": true
+                },
+                {
+                    "title": "advanced.timeSettings",
+                    "index": "TimeSettings",
+                    "fieldName": "TimeSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.systemSettings",
+                    "index": "SystemSettings",
+                    "fieldName": "SystemSettings",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FG160AdvancedMeauList": [
+        {
+            "title": "advanced.WiFi",
+            "index": "WlanSet",
+            "fieldName": "WLAN",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.WiFiAdvancedSettings",
+                    "index": "WiFiAdvancedSettings",
+                    "fieldName": "WiFiAdvancedSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiSecuritySettings",
+                    "index": "WiFiSecuritySettings",
+                    "fieldName": "WiFiSecuritySettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiMACFilter",
+                    "index": "WiFiMACFilter",
+                    "fieldName": "WiFiMACFilter",
+                    "show": false
+                },
+                {
+                    "title": "advanced.WiFiWPS",
+                    "index": "WiFiWPS",
+                    "fieldName": "WiFiWPS",
+                    "show": false
+                }
+            ]
+        },
+        {
+            "title": "advanced.updates",
+            "index": "UpDate",
+            "fieldName": "UpDate",
+            "show": true
+        },
+        {
+            "title": "advanced.route",
+            "index": "Route",
+            "fieldName": "Route",
+            "show": true,
+            "children": [
+                {
+                    "title": "DHCP",
+                    "index": "DHCP",
+                    "fieldName": "DHCP",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DDNS",
+                    "index": "DDNS",
+                    "fieldName": "DDNS",
+                    "show": true
+                },
+                {
+                    "title": "VPN",
+                    "index": "VPN",
+                    "fieldName": "VPN",
+                    "show": false
+                }
+            ]
+        },
+        {
+            "title": "advanced.security",
+            "index": "Security",
+            "fieldName": "Security",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.firewall",
+                    "index": "Firewall",
+                    "fieldName": "Firewall",
+                    "show": true
+                },
+                {
+                    "title": "advanced.MACAddressFilter",
+                    "index": "MACAddressFilter",
+                    "fieldName": "MACAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.IPFilter",
+                    "index": "IPAddressFilter",
+                    "fieldName": "IPAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.specialApplications",
+                    "index": "SpecialApp",
+                    "fieldName": "SpecialApp",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DMZSettings",
+                    "index": "DMZSetting",
+                    "fieldName": "DMZSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.SIPALGSettings",
+                    "index": "SIPALGSetting",
+                    "fieldName": "SIPALGSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.UPnPSettings",
+                    "index": "UPnPSetting",
+                    "fieldName": "UPnPSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.domainFilter",
+                    "index": "DomainFilter",
+                    "fieldName": "DomainFilter",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "fieldName": "System",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.deviceInformation",
+                    "index": "DeviceInfor",
+                    "fieldName": "DeviceInfor",
+                    "show": true
+                },
+                {
+                    "title": "advanced.restart",
+                    "index": "Restart",
+                    "fieldName": "Restart",
+                    "show": true
+                },
+                {
+                    "title": "advanced.reset",
+                    "index": "Reset",
+                    "fieldName": "Reset",
+                    "show": true
+                },
+                {
+                    "title": "advanced.oneClickCheck",
+                    "index": "oneClickCheck",
+                    "fieldName": "oneClickCheck",
+                    "show": true
+                },
+                {
+                    "title": "advanced.diagnosis",
+                    "index": "Diagnosis",
+                    "fieldName": "Diagnosis",
+                    "show": true
+                },
+                {
+                    "title": "advanced.modifyPassword",
+                    "index": "ModifyPassword",
+                    "fieldName": "ModifyPassword",
+                    "show": true
+                },
+                {
+                    "title": "advanced.PINCodeManagement",
+                    "index": "PINCodeManagement",
+                    "fieldName": "PINCodeManagement",
+                    "show": true
+                },
+                {
+                    "title": "advanced.timeSettings",
+                    "index": "TimeSettings",
+                    "fieldName": "TimeSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.systemSettings",
+                    "index": "SystemSettings",
+                    "fieldName": "SystemSettings",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FMAdvancedMeauList": [
+        {
+            "title": "advanced.updates",
+            "index": "UpDate",
+            "fieldName": "UpDate",
+            "show": true
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "fieldName": "System",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.deviceInformation",
+                    "index": "DeviceInfor",
+                    "fieldName": "DeviceInfor",
+                    "show": true
+                },
+                {
+                    "title": "advanced.restart",
+                    "index": "Restart",
+                    "fieldName": "Restart",
+                    "show": true
+                },
+                {
+                    "title": "advanced.reset",
+                    "index": "Reset",
+                    "fieldName": "Reset",
+                    "show": true
+                },
+                {
+                    "title": "advanced.oneClickCheck",
+                    "index": "oneClickCheck",
+                    "fieldName": "oneClickCheck",
+                    "show": true
+                },
+                {
+                    "title": "advanced.diagnosis",
+                    "index": "Diagnosis",
+                    "fieldName": "Diagnosis",
+                    "show": true
+                },
+                {
+                    "title": "advanced.modifyPassword",
+                    "index": "ModifyPassword",
+                    "fieldName": "ModifyPassword",
+                    "show": true
+                },
+                {
+                    "title": "advanced.PINCodeManagement",
+                    "index": "PINCodeManagement",
+                    "fieldName": "PINCodeManagement",
+                    "show": true
+                },
+                {
+                    "title": "advanced.timeSettings",
+                    "index": "TimeSettings",
+                    "fieldName": "TimeSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.systemSettings",
+                    "index": "SystemSettings",
+                    "fieldName": "SystemSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.LEDBrightness",
+                    "index": "LEDBrightness",
+                    "fieldName": "LEDBrightness",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FG101ToolsMenu": [
+        {
+            "title": "tools.SMS",
+            "index": "SMS",
+            "show": true,
+            "children": [
+                {
+                    "title": "tools.SMSConversation",
+                    "index": "SMSSession",
+                    "show": true
+                },
+                {
+                    "title": "tools.SMSSettings",
+                    "index": "SMSSetting",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "tools.statistics",
+            "index": "Flow",
+            "show": true
+        },
+        {
+            "title": "tools.parentalControl",
+            "index": "ChildProtect",
+            "show": false
+        }
+    ],
+    "FG101AdvancedMeauList": [
+        {
+            "title": "advanced.WiFi",
+            "index": "WlanSet",
+            "fieldName": "WLAN",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.WiFiAdvancedSettings",
+                    "index": "WiFiAdvancedSettings",
+                    "fieldName": "WiFiAdvancedSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiMACFilter",
+                    "index": "WiFiMACFilter",
+                    "fieldName": "WiFiMACFilter",
+                    "show": false
+                }
+            ]
+        },
+        {
+            "title": "advanced.updates",
+            "index": "UpDate",
+            "fieldName": "UpDate",
+            "show": true
+        },
+        {
+            "title": "advanced.route",
+            "index": "Route",
+            "fieldName": "Route",
+            "show": true,
+            "children": [
+                {
+                    "title": "DHCP",
+                    "index": "DHCP",
+                    "fieldName": "DHCP",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DDNS",
+                    "index": "DDNS",
+                    "fieldName": "DDNS",
+                    "show": true
+                },
+                {
+                    "title": "VPN",
+                    "index": "VPN",
+                    "fieldName": "VPN",
+                    "show": false
+                }
+            ]
+        },
+        {
+            "title": "advanced.security",
+            "index": "Security",
+            "fieldName": "Security",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.firewall",
+                    "index": "Firewall",
+                    "fieldName": "Firewall",
+                    "show": true
+                },
+                {
+                    "title": "advanced.MACAddressFilter",
+                    "index": "MACAddressFilter",
+                    "fieldName": "MACAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.IPFilter",
+                    "index": "IPAddressFilter",
+                    "fieldName": "IPAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.specialApplications",
+                    "index": "SpecialApp",
+                    "fieldName": "SpecialApp",
+                    "show": false
+                },
+                {
+                    "title": "advanced.DMZSettings",
+                    "index": "DMZSetting",
+                    "fieldName": "DMZSetting",
+                    "show": false
+                },
+                {
+                    "title": "advanced.SIPALGSettings",
+                    "index": "SIPALGSetting",
+                    "fieldName": "SIPALGSetting",
+                    "show": false
+                },
+                {
+                    "title": "advanced.UPnPSettings",
+                    "index": "UPnPSetting",
+                    "fieldName": "UPnPSetting",
+                    "show": false
+                },
+                {
+                    "title": "advanced.domainFilter",
+                    "index": "DomainFilter",
+                    "fieldName": "DomainFilter",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "fieldName": "System",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.deviceInformation",
+                    "index": "DeviceInfor",
+                    "fieldName": "DeviceInfor",
+                    "show": true
+                },
+                {
+                    "title": "advanced.restart",
+                    "index": "Restart",
+                    "fieldName": "Restart",
+                    "show": true
+                },
+                {
+                    "title": "advanced.reset",
+                    "index": "Reset",
+                    "fieldName": "Reset",
+                    "show": true
+                },
+                {
+                    "title": "advanced.oneClickCheck",
+                    "index": "oneClickCheck",
+                    "fieldName": "oneClickCheck",
+                    "show": true
+                },
+                {
+                    "title": "advanced.diagnosis",
+                    "index": "Diagnosis",
+                    "fieldName": "Diagnosis",
+                    "show": true
+                },
+                {
+                    "title": "advanced.modifyPassword",
+                    "index": "ModifyPassword",
+                    "fieldName": "ModifyPassword",
+                    "show": true
+                },
+                {
+                    "title": "advanced.PINCodeManagement",
+                    "index": "PINCodeManagement",
+                    "fieldName": "PINCodeManagement",
+                    "show": true
+                },
+                {
+                    "title": "advanced.timeSettings",
+                    "index": "TimeSettings",
+                    "fieldName": "TimeSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.systemSettings",
+                    "index": "SystemSettings",
+                    "fieldName": "SystemSettings",
+                    "show": true
+                }
+            ]
+        }
+    ],
+    "FG650_Navs": [
+        {
+            "title": "home.home",
+            "icon": "fibocom icon-31shouye",
+            "index": "Home",
+            "show": true
+        },
+        {
+            "title": "networkSettings.networkSettings",
+            "icon": "fibocom icon-wangluo",
+            "show": true,
+            "index": "MobileNetworkSetting"
+        },
+        {
+            "title": "wifiSettings.wifiSettings",
+            "icon": "fibocom icon-xinhao",
+            "show": true,
+            "index": "WLAN"
+        },
+        {
+            "title": "devices.devices",
+            "icon": "fibocom icon-shebeiguanli",
+            "show": true,
+            "index": "Terminal"
+        },
+        {
+            "title": "tools.tools",
+            "icon": "fibocom icon-gongjuxiang",
+            "show": false,
+            "index": "Tools"
+        },
+        {
+            "title": "advanced.advanced",
+            "icon": "fibocom icon-shezhi",
+            "show": false,
+            "index": "Advanced"
+        }
+    ],
+    "FG650_WlanSetMenu": [
+        {
+            "title": "wifiSettings.wifiBasicSettings",
+            "index": "WlanEasySet",
+            "show": true
+        },
+        {
+            "title": "wifiSettings.guestWiFi",
+            "index": "GuestWlan",
+            "show": false
+        }
+    ],
+    "FG650_AdvancedMeauList": [
+        {
+            "title": "advanced.WiFi",
+            "index": "WlanSet",
+            "fieldName": "WLAN",
+            "show": false,
+            "children": [
+                {
+                    "title": "advanced.WiFiAdvancedSettings",
+                    "index": "WiFiAdvancedSettings",
+                    "fieldName": "WiFiAdvancedSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiSecuritySettings",
+                    "index": "WiFiSecuritySettings",
+                    "fieldName": "WiFiSecuritySettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiMACFilter",
+                    "index": "WiFiMACFilter",
+                    "fieldName": "WiFiMACFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.WiFiWPS",
+                    "index": "WiFiWPS",
+                    "fieldName": "WiFiWPS",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.updates",
+            "index": "UpDate",
+            "fieldName": "UpDate",
+            "show": false
+        },
+        {
+            "title": "advanced.route",
+            "index": "Route",
+            "fieldName": "Route",
+            "show": false,
+            "children": [
+                {
+                    "title": "DHCP",
+                    "index": "DHCP",
+                    "fieldName": "DHCP",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DDNS",
+                    "index": "DDNS",
+                    "fieldName": "DDNS",
+                    "show": true
+                },
+                {
+                    "title": "VPN",
+                    "index": "VPN",
+                    "fieldName": "VPN",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.security",
+            "index": "Security",
+            "fieldName": "Security",
+            "show": false,
+            "children": [
+                {
+                    "title": "advanced.firewall",
+                    "index": "Firewall",
+                    "fieldName": "Firewall",
+                    "show": true
+                },
+                {
+                    "title": "advanced.MACAddressFilter",
+                    "index": "MACAddressFilter",
+                    "fieldName": "MACAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.IPFilter",
+                    "index": "IPAddressFilter",
+                    "fieldName": "IPAddressFilter",
+                    "show": true
+                },
+                {
+                    "title": "advanced.specialApplications",
+                    "index": "SpecialApp",
+                    "fieldName": "SpecialApp",
+                    "show": true
+                },
+                {
+                    "title": "advanced.DMZSettings",
+                    "index": "DMZSetting",
+                    "fieldName": "DMZSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.SIPALGSettings",
+                    "index": "SIPALGSetting",
+                    "fieldName": "SIPALGSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.UPnPSettings",
+                    "index": "UPnPSetting",
+                    "fieldName": "UPnPSetting",
+                    "show": true
+                },
+                {
+                    "title": "advanced.domainFilter",
+                    "index": "DomainFilter",
+                    "fieldName": "DomainFilter",
+                    "show": true
+                }
+            ]
+        },
+        {
+            "title": "advanced.system",
+            "index": "System",
+            "fieldName": "System",
+            "show": true,
+            "children": [
+                {
+                    "title": "advanced.deviceInformation",
+                    "index": "DeviceInfor",
+                    "fieldName": "DeviceInfor",
+                    "show": true
+                },
+                {
+                    "title": "advanced.restart",
+                    "index": "Restart",
+                    "fieldName": "Restart",
+                    "show": true
+                },
+                {
+                    "title": "advanced.reset",
+                    "index": "Reset",
+                    "fieldName": "Reset",
+                    "show": true
+                },
+                {
+                    "title": "advanced.oneClickCheck",
+                    "index": "oneClickCheck",
+                    "fieldName": "oneClickCheck",
+                    "show": true
+                },
+                {
+                    "title": "advanced.diagnosis",
+                    "index": "Diagnosis",
+                    "fieldName": "Diagnosis",
+                    "show": true
+                },
+                {
+                    "title": "advanced.modifyPassword",
+                    "index": "ModifyPassword",
+                    "fieldName": "ModifyPassword",
+                    "show": true
+                },
+                {
+                    "title": "advanced.PINCodeManagement",
+                    "index": "PINCodeManagement",
+                    "fieldName": "PINCodeManagement",
+                    "show": true
+                },
+                {
+                    "title": "advanced.timeSettings",
+                    "index": "TimeSettings",
+                    "fieldName": "TimeSettings",
+                    "show": true
+                },
+                {
+                    "title": "advanced.systemSettings",
+                    "index": "SystemSettings",
+                    "fieldName": "SystemSettings",
+                    "show": false
+                }
+            ]
+        }
+    ]
+}

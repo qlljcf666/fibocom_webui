@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[825],{10825:(e,l,n)=>{n.r(l),n.d(l,{default:()=>a});var t=function(){var e=this,l=e.$createElement,n=e._self._c||l;return n("div",[n("VPN")],1)},c=[];const s={},u=s;var r=n(1001),o=(0,r.Z)(u,t,c,!1,null,null,null);const a=o.exports}}]);

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfibocom"]=self["webpackChunkfibocom"]||[]).push([[1129],{11129:(e,t,l)=>{l.r(t),l.d(t,{default:()=>a});var n=function(){var e=this,t=e.$createElement,l=e._self._c||t;return l("div",[l("router-view")],1)},r=[];const u={},c=u;var s=l(1001),o=(0,s.Z)(c,n,r,!1,null,null,null);const a=o.exports}}]);

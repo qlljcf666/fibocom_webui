@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#kill daemon webs-deamon
+/bin/ps -ef | grep webs-deamon | grep -v "grep" | awk '{print $1}' | xargs -i kill -9 {} > /dev/nul
+

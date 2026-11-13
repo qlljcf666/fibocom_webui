@@ -1,0 +1,30 @@
+#!/bin/bash
+# SMS sender for the FM150 ttyOUT endpoint.  The web page supplies UCS2 hex.
+printf 'Content-Type: text/plain; charset=utf-8\r\n\r\n'
+
+urldecode() {
+    local value="${1//+/ }"
+    printf '%b' "$(printf '%s' "$value" | sed 's/%/\\x/g')"
+}
+
+number= msg=
+for part in $(printf '%s' "$QUERY_STRING" | tr '&' ' '); do
+    key=${part%%=*}; value=${part#*=}
+    case "$key" in
+        number) number=$(urldecode "$value") ;;
+        msg) msg=$(urldecode "$value") ;;
+    esac
+done
+
+case "$number" in ''|*[!0-9A-Fa-f]*) echo 'ERROR: invalid recipient'; exit 1;; esac
+case "$msg" in ''|*[!0-9A-Fa-f]*) echo 'ERROR: invalid UCS2 message'; exit 1;; esac
+
+MICROCOM=/usr/bin/microcom
+[ -x "$MICROCOM" ] || MICROCOM=microcom
+{
+    printf 'AT+CMGF=1\rAT+CSCS="UCS2"\r'
+    sleep 1
+    printf 'AT+CMGS="%s"\r' "$number"
+    sleep 1
+    printf '%s\032' "$msg"
+} | "$MICROCOM" -t 10000 /dev/ttyOUT

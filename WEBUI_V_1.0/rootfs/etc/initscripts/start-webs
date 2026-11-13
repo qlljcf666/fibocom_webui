@@ -1,0 +1,32 @@
+#!/bin/sh
+#  ---------------------------------------------------------------------------
+#   Copyright (c) 2011 Qualcomm Technologies, Inc.  All Rights Reserved.
+#   Qualcomm Technologies Proprietary and Confidential.
+#  ---------------------------------------------------------------------------
+#
+
+set -e
+mtd_file=/proc/mtd
+
+case "$1" in
+start)
+        echo -n "Starting webs: "
+        start-stop-daemon -S -b -a /usr/bin/webs --home /webs
+        echo "done"
+        ;;
+    stop)
+        echo -n "Stopping webs: "
+        start-stop-daemon -K -n webs
+        echo "done"
+        ;;
+    restart)
+        echo -n "Restarting webs: "
+        $0 stop
+        $0 start
+        ;;
+    *)
+        echo "Usage start_webs{ start | stop | restart }" >&2
+        exit 1
+        ;;
+esac
+exit 0

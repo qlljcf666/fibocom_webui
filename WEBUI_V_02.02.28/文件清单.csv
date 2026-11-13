@@ -1,0 +1,126 @@
+﻿原始绝对路径,类型,权限(八进制),大小(字节),SHA256,说明
+/webs/web/js/7987.1732844826120.js,文件,0755,2373,0ec2b7edae8b259841186f9e5d0d575fde871786c7dbf8be2ee78d16ce1007f6,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/static/fonts/iconfont.935a60da.ttf,文件,0755,17616,661f142f7d3e606787cd9e0e282ab15c79038c55d8b4d372a91f9e55893531d9,图标字体文件（iconfont / Element 图标），供 CSS @font-face 引用
+/webs/web/static/img/bg.bb57e96c.jpg,文件,0755,154910,9611c4feaa2bd3a5d821e4b2cb1201f61707036fbc61a88dc697b9148f56d952,构建后的页面背景图（名称含哈希）
+/webs/web/js/2032.1732844826120.js,文件,0755,322,ea2fa1c21f7f0bb232b82626a08fd6df3de553688ed3a012d30d38909abe6451,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/chunk-vendors.1732844826120.js,文件,0755,783111,36bdc15ebe5f1de78910a7aef9dd6cfe7c07aeade4ac4ca8014b4e5dceb325fc,第三方依赖打包（Vue/Element 等运行时库），入口页面直接加载
+/webs/web/css,目录,0755,-,-,样式目录
+/webs/web/css/chunk.7950.1732844826120.css,文件,0755,153,8bf0d6808938d503899b346ddcfce2324de5e56597416d0ea14d8cc490acb3ac,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/images/login_bg.png,文件,0755,838290,cbe42e0ccf89bf54a213116a5ab4d4cbe458ab1ad4aeca7f10d44ded2224be33,登录页背景图
+/webs/web/static/fonts/element-icons.ff18efd1.woff,文件,0755,28200,ab40a58972be2ceab32e7e35dab3131b959aae63835d7bda1a79ae51f9a73c17,图标字体文件（iconfont / Element 图标），供 CSS @font-face 引用
+/webs/web/js,目录,0755,-,-,脚本目录
+/webs/web/js/4235.1732844826120.js,文件,0755,326,8f3d0572ef58326a1b0399a693db53f5b65317eb7018f07a0e150b0cd58a5c5a,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/7611.1732844826120.js,文件,0755,327,05342a324434f52112a7f0786c510799a7502bcc7875500c0d9bbd5e40f2717f,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/images/bg.jpg,文件,0755,154910,9611c4feaa2bd3a5d821e4b2cb1201f61707036fbc61a88dc697b9148f56d952,页面背景图（JPG）
+/webs/web/js/6695.1732844826120.js,文件,0755,321,4d3cce56260c0dd490b2c41803be6b73867175707d59bd8b2f29e4ff795ee119,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs,目录,0755,-,-,前端站点父目录
+/webs/web/js/3094.1732844826120.js,文件,0755,319,5439e1f2ce6b75b4955b2a26020378902b00694c5e21097ed1edd5625b4ce9f1,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/images/logo1.png,文件,0755,99183,49d8e7995f3fd90599c58cae8af44b306ea635820f456d96d346a681c5939935,登录页 Logo（config.js 的 logoUrl 指向此文件）
+/webs/web/js/825.1732844826120.js,文件,0755,318,24b2ec9626fb2a63bf2ecb8c8563092b852c54de5561008f2e534677e5f35b30,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.5025.1732844826120.css,文件,0755,94,904820fdf3e92cd5593e1e6459479a9476ea6bff99eb0bb36ecc5a8f728e013a,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/1807.1732844826120.js,文件,0755,1397,fc6b0e6e8417c9cada5e2a50bddccf20319f9a8c379f5423d895ffceb77dedf7,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/9039.1732844826120.js,文件,0755,8169,5d0bc202bdb80e9588e29db95209e3a710a257144fd1f7393d5842692dc70df6,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/webui_version,文件,0755,16,ac6fba11cd1eeefb1d57bca4a898e26b8bd6c9e4132fe6ab286108b1957918b3,WEBUI 版本标识文件，内容为 WEBUI_V_02.02.28
+/webs/web/css/chunk.8859.1732844826120.css,文件,0755,212,f57dd0b93c32d3f063004f39f435fa46c35087f15e73128e047fc261866aa34c,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/850.1732844826120.js,文件,0755,576,90d491a6599159ab2b73ea0e887f9dd7ec0aa889a5432b3eb76a01272941253f,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/static/fonts/iconfont.f4a97567.woff,文件,0755,11340,cc6db129d5dc9b134cb7be9d2b00745aec75edd0ecbae066fb5aa4c3fc6531cc,图标字体文件（iconfont / Element 图标），供 CSS @font-face 引用
+/webs/web/js/3024.1732844826120.js,文件,0755,329,9024a30b0ffe36b7b432eea2354ca261f23d4a808b15921220561ad01671e1bc,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/favicon.ico,文件,0755,4286,6004cd86d0b801872c60426ab0f13f9cb7e48834ed2a21047b5382e49c466bfd,站点图标
+/webs/web/css/chunk.57.1732844826120.css,文件,0755,656,55f4420d874215ac363858082c1bbe7253ce0e8585ff38f81c3a32a0e5239490,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/57.1732844826120.js,文件,0755,30673,8a93f8deb1f76a0640d153374e0d84e6ceca1f5edba6cc39b4b2633f39467f5b,Webpack 异步分包：WLAN/WiFi 相关页面逻辑（含 W5G/W6G/W2P4G 状态处理）
+/webs/web/js/1129.1732844826120.js,文件,0755,327,42498e63cb497c15683f10dfd17fb3314f07bc231c1430ee13a3230c8cd86caa,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.8460.1732844826120.css,文件,0755,212,dac1d1ce7851c9e426009766e2d3bfed9c79150d6f36b4aeb231ff0d2b88613b,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/lib/systemd/system/lighttpd.service,文件,0644,348,ed3ce63c16aaaa0798218229707ad0fce9474d9714aeb3e425d3e7354df6b2d5,systemd 服务单元：开机启动 lighttpd 并调用 initscript
+/webs/web/js/1001.1732844826120.js,文件,0755,320,46d5f8aa3410d594b89a19b235db2d17a6ac45f317e4fdc022983ee5707d3f04,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.7323.1732844826120.css,文件,0755,254,faea76da435425aab68ca13a279544464ff5f0bcaf78adf5defddcab620a1688,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.8516.1732844826120.css,文件,0755,1317,28d3d51fcc6c9887c9566a744c59f3b7ae9a413e24a0949261109833f62810c0,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/static/fonts/element-icons.f1a45d74.ttf,文件,0755,55956,a30f5b3ba6a48822eae041e0ca5412a289125e4ba661d047dae565ac43b4a6b2,图标字体文件（iconfont / Element 图标），供 CSS @font-face 引用
+/webs/web/config.js,文件,0755,126,accde72b7788adc280948ea14be490d55a5e098f351b76ab7095bad990de90ca,登录页品牌配置（标题、登录插图、Logo 路径）
+/webs/web/images/logo.png,文件,0755,37772,95065059116542022c226097ddd6b05b8b0fb9b215d600a6df07b26ffd25d590,品牌 Logo
+/webs/web/js/91.1732844826120.js,文件,0755,328,b6f5a17c51d1fb7f1be58b72a5b6ca7fc3b0607d61cec96adaa0ef71b5fc2eb4,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/4523.1732844826120.js,文件,0755,322,33c358b26e2b1b6ee946c9effa035bf9d1f4419ab63f1d036a3fb5c4da3d791a,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/json/permission.json,文件,0755,37441,292dd588a795cd827473a30394dacfbf80c16427b8ac7e704f07b2bca68438c8,菜单/页面权限配置（navs、children、show 字段）
+/webs/web/images/logo2.png,文件,0755,42984,a1f7f14078f30a10401ec40b6b11686f0bdc44880f7f81712bd7a6e237f653df,品牌 Logo 备用图
+/webs/web/js/5389.1732844826120.js,文件,0755,320,747a8923036cea77ef7dc1442d4acd498fe71e7692e43a96c676fe792db00147,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/2128.1732844826120.js,文件,0755,8376,ec5431eae936accf33c3a3c17003b28f8de38ce884f4cd412a156f53e3c50ec4,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/2491.1732844826120.js,文件,0755,329,3e909d03d2220acd5760b10f4d12cef767f30404504f4b2cfd6428fc2dfc429e,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/523.1732844826120.js,文件,0755,326,9482a83ea45f5bf1e75af3e87473fbdd2a8725c3dfd942224588ff3dc0c4b3dd,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/8596.1732844826120.js,文件,0755,324,fc204a650c44480dfc39451d9fd527fabf8187e0280fb961cb332fb6677e0da6,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/8202.1732844826120.js,文件,0755,326,3b7c626f77caa5c7c1185a0ceef37b1916f844af4774b7b37f735668062a4bdb,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.2388.1732844826120.css,文件,0755,212,ca5bd2327a26578475e82ad3a945b064ae7c173106610ed22d8ed1b32c5cb19c,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/static/img/offLineWifi.96f28050.png,文件,0755,12191,d3318ac0ee99fc7e35377193aae1d0291bdb7bdba2136f0ee9acd4cb32a9cb4c,WLAN 离线状态图标
+/webs/web/js/5013.1732844826120.js,文件,0755,19344,c788a5ce0e63af83fcef318337edee13182b924034322f3a13c17bdcdc41580a,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/7910.1732844826120.js,文件,0755,326,0cb4d880bd59446742b8e15136dda04b85d22d3ba72085ac18893445525eeb87,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/703.1732844826120.js,文件,0755,329,a3075804297b0af32c23a0a589aa48d8c8777372c39a2d1253fc0b7ff30ade9a,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/7788.1732844826120.js,文件,0755,333,1cff03e99441923ab1af641fddb6184bb709583786d79c1392f1a4315d090794,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/etc/initscripts/lighttpd,文件,0755,4813,f533abc790775c6f41bad79adc0a4e771114e9db8b587b10191fd0d6f5e254ec,lighttpd 启停脚本：生成/复用自签证书，清理会话文件，启动/停止服务
+/webs/web/js/2583.1732844826120.js,文件,0755,327,38c4e1bf2ce427d3d7449584348f131200d9f7f40aaa714c034f727530287e54,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.1758.1732844826120.css,文件,0755,212,79ac1a7ad1aa994e1dc203b8fae86a470d097e4479f0e4ae865dbbb68dc25114,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/7725.1732844826120.js,文件,0755,330,6a70c6c9493f0eb92857471e92add16d8b28a1a0917a85dc5f4e4c7d17549730,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/images/logo3.png,文件,0755,4673,7f8dae062dcbb7aca8009412e96180ba6cd7644a94d7cd4bda9768383accc113,品牌 Logo 备用图
+/webs/web/js/index.1732844826120.js,文件,0755,737470,88c82613f1472be5b51177509555da9d5168c0b80b7a50d01e12d4d386106838,应用主逻辑：初始化、路由、状态管理、登录鉴权入口
+/etc/backup_restore.sh,文件,0755,2649,bb65bbbb9c6fc6e252f1403940b380aef28bb323c39214249f993b22777e19f3,配置备份/恢复脚本（backup|restore，打包 /etc/backup.list 中的路径）
+/webs/web/js/687.1732844826120.js,文件,0755,327,491754cc4f4251dbbaf321af6395040e81e36e5263bfe2ae2d3a40247add3a82,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.5446.1732844826120.css,文件,0755,153,433c96fe00c9ad0d75443d8085ac5bb9566e6f8bf148d965fe95977cb819437a,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/images/bg.png,文件,0755,919962,636dc3cb5c93031fce4ef9d29d530d0ac9d1a4a51d7fec88d22b01a9fa1a0163,页面背景图（PNG，透明素材）
+/webs/web/js/8794.1732844826120.js,文件,0755,330,47b1b1031c092c49cfed19b9e49f5fdffbfddf485d8a20c4cad84676b1627817,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/8859.1732844826120.js,文件,0755,7592,b0912322e89da5c1b480282791d08d198a1f3f23d1501a2d632395415b804b16,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/9669.1732844826120.js,文件,0755,320,6920bb48d5bd7486f4a354960ebe91018e1720f929d7c48707de0640a92dcfab,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.5013.1732844826120.css,文件,0755,222,67edb6d800af47a3a2d0af8863f53c458266e2cf1a424acb0aa31c18e7cbe472,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/data/lighttpd.conf,文件,0755,13477,840e53517c74aec7c22c6b8a505212618bb385ead751329eacf42290c43dcb0b,lighttpd 主配置：监听 80/443、document-root=/webs/web、TLS 证书路径
+/webs/web/js/6674.1732844826120.js,文件,0755,577,33a93a15f8fcf39166d0bfbc5666b0fab97da0f7b58eabf2aacfc087faa3e0da,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/data/firewall.fibocom,文件,0755,81,c3433824263c5922b4febd612fa1e6846a0e5939cb9fc1176fbec2260cd013ce,防火墙默认开关配置（fibo_firewall_switch 等）
+/webs/web/css/chunk.7679.1732844826120.css,文件,0755,212,190ae3a097701384a22ef45e853d122fac183e5d71c28af69194260600323394,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/data/openssl.cnf,文件,0755,9771,cce5875dc087d72b7994046e5b837b62cc4801371c01f2864dfe1c7270add626,自签 TLS 证书生成参数（供 initscript 调用 openssl req 使用）
+/webs/web/js/4538.1732844826120.js,文件,0755,7451,44c6296f0313a1efaf9b479632e62d0453ff6108bdb56bde972eae6af8e7f77c,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/464.1732844826120.js,文件,0755,323,0915f14e0cc356b90c4986b082fefbea414c7e6bb1e6b81b044a12788e1650c2,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/9687.1732844826120.js,文件,0755,327,cef883bf10ebd78b8e8ee2cdc9060f098749d804607cc5b3bf18aab056bcf021,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.2128.1732844826120.css,文件,0755,212,1762ed193ca521c4d977e78a5ff07566236d290a1b89a59eb631be222cf49f6b,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/usr/sbin/lighttpd,文件,0755,270980,0e4bc89086c63c7af2460f0ce7f89d2683cf084bb5a0df1cb92f29ceb73cf045,lighttpd 主程序（ARM 32 位 ELF，动态链接 /lib/ld-linux-armhf.so.3）
+/data/backup.list,文件,0644,6,263aca83a3ff2cd846024109381a9112b546729acbcc38b9c2296fd512aea02c,配置备份清单，当前仅包含 /data
+/webs/web,目录,0755,-,-,WEBUI 静态站点根目录（lighttpd server.document-root）
+/webs/web/js/8823.1732844826120.js,文件,0755,604,c056ebcddb93f49a5a4adaff41da4abba5442f4ccf9d007e3e442f56e0b9560c,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/lib/systemd/system-preset/98-lighttpd.preset,文件,0644,24,d7ac5abc941438f26f8abdabb67e0b211d0ffda2a15394bdf9016183f7d80eaa,systemd preset，默认 enable lighttpd.service
+/webs/web/json,目录,0755,-,-,JSON 配置目录
+/webs/web/js/6016.1732844826120.js,文件,0755,8331,8bdd928f49501748048c8fe24959a9bc2f48fb83aa9db707e8155d550e6bbd5e,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/3917.1732844826120.js,文件,0755,1245,7ecc4e3e0d15c164e9ea7caef7021cf007eccf5f14d8c8afcee0df81deda3c71,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/index.html,文件,0755,750,4f3e6c5f908691967ff41ebd785cbc0f67a4b078e99f6cfaff05850927688930,单页应用入口，引用 /js、/css 绝对路径资源
+/webs/web/static/img/login_pic.c4e5d155.png,文件,0755,11095,661c359e911d94e87e4b25d1da286ef7dc16e702f9a61b94e820056905c11e3f,登录页插图（构建产物，名称含哈希）
+/webs/web/js/2607.1732844826120.js,文件,0755,331,6c0c73cf9b26a46bf104b7528185f2dae34178faacf76bd9abd13ff4d7b81c97,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/index.1732844826120.css,文件,0755,48968,f7449a1f46353ab539aadea6e46d2d13f65d9577692fec99d640fba26294d02b,应用主样式（页面布局、主题、公共组件样式）
+/webs/web/js/7950.1732844826120.js,文件,0755,2237,13822e9162fb91c9cf29cd88e32a63cc79754551af8a8a47d8d7666ec1c2320d,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/usr/sbin/lighttpd-angel,文件,0755,5520,5bbf91f23bbf8351d8ac453b85e3a1e9aaa8c464034d169d53665a782b1fee2c,lighttpd 守护/拉起程序（ARM 32 位 ELF）
+/webs/web/css/chunk.9039.1732844826120.css,文件,0755,212,8e6d67ae27646a92c763e5d42b3fc755f5792cbd9fc48de24550408e9134e848,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/3613.1732844826120.js,文件,0755,327,c8f70e5a54d135d8e39acb59e64bf30b593a73815def1ecba74c807b246de650,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/images/login_pic.png,文件,0755,11095,661c359e911d94e87e4b25d1da286ef7dc16e702f9a61b94e820056905c11e3f,登录页插图（config.js 的 imgUrl 指向此文件）
+/webs/web/js/7679.1732844826120.js,文件,0755,8169,c6e9a5ff2c78dc6bc753b68394599b1e6a84db4685d2b996b2e73f69988168d7,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk-vendors.1732844826120.css,文件,0755,223206,757f432f52112de7e06e0415115382b15a3ce672fbce000d1895067a2de425c2,第三方依赖样式（Element UI 等基础样式）
+/webs/web/images/bg1.jpg,文件,0755,80426,b56f4a551639add67686649b97787a821df51da9e4f59c2c06c39d9bbfe03b6c,备用页面背景图
+/webs/web/js/4418.1732844826120.js,文件,0755,314,d0ae52354935291d6ff67a3409695048ac16bd2a5b10b8ab16dcbe8e1a8c3f92,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/static,目录,0755,-,-,构建静态资源目录
+/webs/web/static/img/onlineWifi.682af453.png,文件,0755,15982,c7665964120eaaa06ea2a1663cb7541038f63fba712c96946b178d8b5f487067,WLAN 在线状态图标
+/etc/lighttpd,目录,0755,-,-,lighttpd 预留配置目录（本镜像为空）
+/webs/web/css/chunk.6016.1732844826120.css,文件,0755,212,7e59f712b3e16567c2c4b77471e27e21aff7ce835d5b6311d22cc33d141779d4,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/8023.1732844826120.js,文件,0755,325,6a5896f1b85cd85033adeb71954cca29c185ffe7d241c92dfba9ad182abc4803,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/8516.1732844826120.js,文件,0755,5687,69aa892fc02e931a5dcad27d85d8313e60a7feeef8b295abe76cecbfabdd2707,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/images,目录,0755,-,-,图片资源目录（登录页/背景/Logo）
+/webs/web/static/fonts,目录,0755,-,-,图标字体目录
+/webs/web/js/8460.1732844826120.js,文件,0755,7541,5fb41a76dfd9affe192c668f0a887446a259932238fb2f223c8bc98257d5c4f9,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/static/fonts/iconfont.1ae4cca0.woff2,文件,0755,9924,740e56869930deef71201e22ffdc93da1293345f80faa2ac41e3ac9b76d6be60,图标字体文件（iconfont / Element 图标），供 CSS @font-face 引用
+/webs/web/static/img/leftSiderBg.fa0d0512.png,文件,0755,17733,44f79bacb3de4edd3f640dc252b2bad5f1a5c599c7683dadf6cd2567edf4982d,侧边栏背景图（构建产物，名称含哈希）
+/webs/web/js/9425.1732844826120.js,文件,0755,327,2fe4a5d7c87d060ca2942cf005c03f424cac14f2e093d36a5fdfb43731594049,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/2388.1732844826120.js,文件,0755,7565,5e99557c39e72b1b9c30b008fe094440f242a018ff71e088ec37cbb4657a5e9c,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/etc/lighttpd.d,目录,0755,-,-,lighttpd 预留 conf.d 目录（本镜像为空）
+/webs/web/js/5870.1732844826120.js,文件,0755,327,51294f406b63b915d63e6864ad226794ac91f21b0ddf92dd33c70fe5344c70cd,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/114.1732844826120.js,文件,0755,2173,b2d8357ce756c84200fe0bd94fc007ced079131733f4f0bfcc4706065091bccb,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/3403.1732844826120.js,文件,0755,329,b490bcce6dcec5ff76ead1ac19109a96968ab8c03fdf841387f20f0fe68ea6b3,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.4538.1732844826120.css,文件,0755,664,276e59bc0dc993f93bc0f42a76ceb358be17318668a9d0ba19e6f0fb5511a061,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/1758.1732844826120.js,文件,0755,8375,e19fbaaed10aa341fb5ae07d16829b401c4fcd00a076cbdba191af281123433a,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/7323.1732844826120.js,文件,0755,715,32c35f3233ed8e2841495f7d08a161035715de0d77076fe59f8e87f86e53c507,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/875.1732844826120.js,文件,0755,326,1ae350cdc6c4eedae9064d68b14fadb72c47eed17ee94b3e5f0e41f1d259cea7,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/1114.1732844826120.js,文件,0755,326,a1562425ed0d67489637eddde6dedf8051de5791ce749d1cd987aa255e86e574,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/js/5025.1732844826120.js,文件,0755,1051,931d55ac8908cf3377a56a2bb36f0dd972232e859304c022cfdcf433199d8c43,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/static/img,目录,0755,-,-,构建图片目录（文件名含内容哈希）
+/webs/web/css/chunk.3917.1732844826120.css,文件,0755,551,edbd937d88e76a34035d15409e21f51def92b6d76deab82dcd8ec85e5d8d01f6,页面分包样式（按需加载），文件名含构建哈希，禁止改名
+/webs/web/js/5446.1732844826120.js,文件,0755,2558,9827c25db6139a4ce65934f9d8029d78c492bc248ce9eb5855df53c378911b57,Webpack 异步分包（按需加载的功能页面/组件），文件名含构建哈希，禁止改名
+/webs/web/css/chunk.8823.1732844826120.css,文件,0755,254,e46a1cf6508d0905d755903b0e87be070b9721da240681d667328caa86a3ac48,页面分包样式（按需加载），文件名含构建哈希，禁止改名

@@ -1,0 +1,67 @@
+#!/bin/sh
+# 卸载模组内置原厂 WEBUI
+# 用法: adb shell sh /data/local/tmp/fiboweb-install/uninstall.sh
+# 可选：FIBOWEB_ROOT 指定安装目录；KEEP_DATA=1 保留配置与日志
+set -u
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH
+
+ROOT=${FIBOWEB_ROOT:-}
+if [ -z "$ROOT" ]; then
+    for d in /data /usrdata /mnt/data /home/root /userdata /opt; do
+        if [ -d "$d/fibocom-webui" ]; then
+            ROOT="$d/fibocom-webui"
+            break
+        fi
+    done
+fi
+ROOT=$(printf '%s' "${ROOT:-}" | sed 's:/*$::')
+
+echo "== 卸载 Fibocom 内置 WebUI =="
+[ -n "$ROOT" ] && echo "安装目录: $ROOT"
+
+PORT=""
+[ -n "$ROOT" ] && [ -f "$ROOT/etc/port" ] && PORT=$(cat "$ROOT/etc/port" 2>/dev/null || true)
+
+if [ -d /run/systemd/system ] && command -v systemctl >/dev/null 2>&1; then
+    systemctl stop fiboweb.service >/dev/null 2>&1 || true
+    systemctl disable fiboweb.service >/dev/null 2>&1 || true
+    rm -f /etc/systemd/system/fiboweb.service
+    systemctl daemon-reload >/dev/null 2>&1 || true
+elif [ -f /etc/init.d/fiboweb ]; then
+    /etc/init.d/fiboweb stop >/dev/null 2>&1 || true
+    /etc/init.d/fiboweb disable >/dev/null 2>&1 || true
+    rm -f /etc/init.d/fiboweb
+fi
+# OpenWrt 的 rc.d 链接（disable 未生效时兜底）
+rm -f /etc/rc.d/S99fiboweb /etc/rc.d/K99fiboweb 2>/dev/null || true
+
+if [ -n "$ROOT" ] && [ -x "$ROOT/bin/fibowebctl" ]; then
+    "$ROOT/bin/fibowebctl" stop >/dev/null 2>&1 || true
+fi
+pkill -f "bin/fiboweb" >/dev/null 2>&1 || true
+
+if [ -f /etc/rc.local ]; then
+    sed -i '/# >>> fibocom-webui-inmodem >>>/,/# <<< fibocom-webui-inmodem <<</d' /etc/rc.local 2>/dev/null || true
+fi
+
+if [ -n "$PORT" ] && command -v iptables >/dev/null 2>&1; then
+    for src in 192.168.0.0/16 10.0.0.0/8 172.16.0.0/12 169.254.0.0/16; do
+        iptables -D INPUT -s "$src" -p tcp --dport "$PORT" -j ACCEPT >/dev/null 2>&1 || true
+    done
+    iptables -D INPUT -p tcp --dport "$PORT" -j ACCEPT >/dev/null 2>&1 || true
+    for i in eth0 usb0 rndis0 br-lan; do
+        iptables -D INPUT -i "$i" -p udp --dport 67 -j ACCEPT >/dev/null 2>&1 || true
+    done
+fi
+
+if [ -n "$ROOT" ] && [ -d "$ROOT" ]; then
+    if [ "${KEEP_DATA:-0}" = "1" ]; then
+        rm -rf "$ROOT/www" "$ROOT/bin"
+        echo "已保留配置与日志: $ROOT/etc $ROOT/var"
+    else
+        rm -rf "$ROOT"
+    fi
+fi
+
+echo "卸载完成。"
